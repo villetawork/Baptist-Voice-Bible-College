@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    fetch('/assets/head.html')
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
+</script>
+
+<body>
+    <div id="navigation"></div>
+    <!-- main -->
+    <main>
+        <div class="intro">
+            <video muted loop autoplay class="video">
+                <source src="assets/video/intro/Intro1.mp4" type="video/mp4" />
+            </video>
+            <div class="overlay"></div>
+            <div class="overlay2"></div>
+            <div class="introtxt">
+                <div class="welcome">
+                    <h3>Welcome to</h3>
+                    <h1>BVBC</h1>
+                </div>
+                <p>Baptist Voice Bible College, is a private school that offers foundational and higher education. It
+                    has been operated and managed by Grace Baptist Church since 2000.
+                </p>
+                <div class="button1">
+                    <a href="">Contact us</a>
+                </div>
+            </div>
+            <div class="custom-shape-divider-bottom-1750301863">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="slider">
+            <ul class="slides">
+                <li class="fade">
+                    <div class="custom-shape-divider-top-1750324223">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <img src="assets/img/Home/slider/1.png">
+                </li>
+                <li class="fade">
+                    <div class="custom-shape-divider-top-1750324223">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <img src="assets/img/Home/slider/3.png">
+                </li>
+                <li class="fade">
+                    <div class="custom-shape-divider-top-1750324223">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <img src="assets/img/Home/slider/4.png">
+                </li>
+                <li class="fade">
+                    <div class="custom-shape-divider-top-1750324223">
+                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <img src="assets/img/Home/slider/6.png">
+                </li>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </ul>
+            <div class="count">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="explore">
+            <div class="columnExplore">
+                <div class="txtexplore">
+                    <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
+                    <p>BVBC offers a diverse range of academic programs designed to equip students with the knowledge,
+                        skills, and values needed to succeed in today's competitive world.</p>
+                </div>
+                <div class="WrapperExplore">
+                    <div class="Excontainer">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/bbvbcws.JPG" alt="">
+                        </div>
+                        <div class="txtExContainer">
+                            <h1>UNDERGRADUATE PROGRAMS</h1>
+                            <p>Discover a multitude of bachelor’s degree programs that offer limitless potential for
+                                launching your career.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Excontainer">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/PPHSICLL.jpg" alt="">
+                        </div>
+                        <div class="txtExContainer">
+                            <h1>RR-JUNIOR HIGH SCHOOL</h1>
+                            <p>Begin your child’s educational journey with our exceptional preschool and basic education
+                                curriculum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<hr>
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="assets/js/sliders.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+        loadHTML('navigation', '/assets/navigation.html');
+        loadHTML('footer', '/assets/footer.html');
+    </script>
+</body>
+
+</html>

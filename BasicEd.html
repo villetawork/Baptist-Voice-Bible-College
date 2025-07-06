@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    fetch('/assets/head.html')
+      .then(response => response.text())
+      .then(data => document.head.innerHTML = data);
+</script>
+<body>
+    <div id="navigation"></div>
+
+    <!-- main -->
+    <main>
+        <div class="line"></div>
+        <div class="gallery">
+            <div class="column">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="column">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="column">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="column">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div class="bottom-enroll">
+            <h1>Enroll Now at Baptist Voice Bible College – Where Faith and Learning Grow Together!</h1>
+            <p>Baptist Voice Bible College – Basic Education Department is now accepting enrollees for the upcoming school year! Give your child the gift of quality Christian education in a nurturing environment.</p>
+        </div>
+        <div class="push"></div>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script src="assets/js/sliders.js"></script>
+    <script src="assets/js/modal.js"></script>
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+        loadHTML('navigation', '/assets/navigation.html');
+        loadHTML('footer', '/assets/footer.html');
+    </script>
+</body>
+
+</html>
