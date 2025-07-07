@@ -240,15 +240,46 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: rgba(var(--primary-color));
     height: 100vh;
     gap: 20px;
+    position: relative;
 }
+
+.explore .overlay1 {
+    background-color: rgba(0 0 0 / 52%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.explore .overlay2 {
+    background-color: rgba(125 10 10 / 73%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.explore { 
+    background-image: url('/assets/img/Home/Background-imgs/BG1.png'), linear-gradient(rgba(var(--secondary-color),0.5));
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+}
+
 
 .columnExplore {
     flex-direction: column;
     gap: 40px;
     display: flex;
+    z-index: 1;
 }
 
 .WrapperExplore {
@@ -321,3 +352,42 @@ main {
 .txtExContainer p {
     color: black;
 }
+
+/*----------------College Dep.----------------*/
+.watermark {
+    background: url('/assets/img/logo/Logo.png') center no-repeat fixed;
+    opacity: .2;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.bgoverview {
+    overflow: hidden;
+    height: 32vh;
+    position: relative;
+}
+
+.bgoverview .overlay1 {
+    background:  rgb(27 8 8 / 68%);
+    width: 100%;
+    height: 100%;
+}
+
+.bgimgC1 {
+    background: url('/assets/img/CollegeDep/backgrounds/bg1.JPG') no-repeat 50% 24%/110rem;
+    height: 100%;
+    z-index: -1;
+    position: sticky;
+    opacity: .7;
+}
+
+.bgoverview h1 {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(var(--secondary-color));
+    font-size: 5vw;
+}
+
