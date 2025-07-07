@@ -9,6 +9,7 @@ main {
     min-height: 86vh;
     overflow: hidden;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.158) 59%;
 }
 
 .video {
@@ -22,18 +23,19 @@ main {
     transform: translate(-50%, -50%);
     z-index: -1;
     object-fit: cover;
+    opacity: .8;
 }
 
-.intro .overlay {
-    background:  rgba(0, 0, 0, 0.589);
+/* .intro .overlay {
+    background:  rgba(0, 0, 0, 0.158) 59%;
     height: 100%;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: 0;
     pointer-events: none;
-    /* Allows clicks to pass through */
-}
+    /* Allows clicks to pass through 
+} */
 
 /* .intro .overlay2 {
     background-image: linear-gradient(90deg, rgba(var(--dark-color), 0.5) 0%, rgba(128, 0, 0, 0.05) 59%);
@@ -88,7 +90,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: "Poppins", sans-serif;
-    /* text-shadow: var(--shadow-dark); */
+    text-shadow: var(--shadow-dark);
     width: 30vw;
 }
 
