@@ -9,7 +9,7 @@ main {
     min-height: 86vh;
     overflow: hidden;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.158) 59%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .video {
@@ -90,7 +90,7 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: "Poppins", sans-serif;
-    text-shadow: var(--shadow-dark);
+    /* text-shadow: var(--shadow-dark); */
     width: 30vw;
 }
 
