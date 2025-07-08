@@ -33,7 +33,7 @@ header {
 .title h1 {
     color: rgba(var(--primary-color));
     font-family: "Ancizar Sans", sans-serif;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-style: normal;
     font-weight: 800;
     text-align: center;
