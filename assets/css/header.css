@@ -1,8 +1,9 @@
 header {
-    background-color: rgba(var(--secondary-color));
+    background-color: red;
     min-height: 50px;
     box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
+
 
 .nav-logo {
     padding-right: 30px;
@@ -99,3 +100,8 @@ header {
 .dropdown:hover .hover-items {
     display: block;
 }
+
+.hamburger-nav {
+  display: none;
+}
+

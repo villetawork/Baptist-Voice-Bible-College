@@ -18,7 +18,7 @@ body {
     --text-color: #000000;    
     --accent-color: #850c0cf1;
     --highlight-color: 253, 230, 118;
-    --gold-color: 255, 224, 0;
+    --gold-color: 255, 255, 0;
     --text-white: 255, 255, 255;
     --shadow-dark: 0 6px 10px black;
     --shadow-dark2: 3px 4px 10px black;
@@ -50,6 +50,19 @@ body {
         font-size: 14px;
     }
 }
+
+
+@media (max-width: 1080px) {
+  header nav .navbar-content {
+    display: none;
+  }
+
+  header nav .hamburger-nav {
+    display: block;
+  }
+
+}
+
 
 /*-------------------- Social Media Icons --------------------*/
 .fa {
