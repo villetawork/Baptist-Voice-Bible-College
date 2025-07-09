@@ -36,10 +36,10 @@ body {
         top: 50%;
         transform: translateY(-50%);
     }
+/*     
+            font-size: 40px;
+            line-height: 45px; */
 
-
-        font-size: 40px;
-        line-height: 45px;
     }
 
     .introtxt h3 {
@@ -49,7 +49,7 @@ body {
     .introtxt p {
         font-size: 14px;
     }
-}
+/* } */
 .hamburger-nav {
   display: none;
 }
