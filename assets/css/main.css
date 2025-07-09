@@ -265,8 +265,8 @@ main {
     z-index: 0;
 }
 
-.explore { 
-    background-image: url('/assets/img/Home/Background-imgs/BG1.png'), linear-gradient(rgba(var(--secondary-color),0.5));
+.explore {
+    background-image: url('/assets/img/Home/Background-imgs/BG1.png'), linear-gradient(rgba(var(--secondary-color), 0.5));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -361,6 +361,7 @@ main {
     height: 100vh;
     z-index: -1;
 }
+
 .bgoverview {
     overflow: hidden;
     height: 32vh;
@@ -368,7 +369,7 @@ main {
 }
 
 .bgoverview .overlay1 {
-    background:  rgb(27 8 8 / 68%);
+    background: rgb(27 8 8 / 68%);
     width: 100%;
     height: 100%;
 }
@@ -381,6 +382,8 @@ main {
     opacity: .7;
 }
 
+
+/* -------------------- Admission -------------------- */
 .bgimgAd1 {
     background: rgba(var(--primary-color), 1);
     height: 100%;
@@ -409,5 +412,77 @@ main {
 }
 
 .Admission .txtholder {
-    transform: translate(-80%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 10%;
+}
+
+
+/* ------------------- Calendar ------------------- */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.header {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.highlight {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.nav {
+    margin: 10px;
+}
+
+#month-label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#event-details {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#event-details {
+    margin-top: 20px;
+    text-align: left;
+    max-width: 1300px;
+    margin-inline: auto;
+}
+
+.event-card {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h1 {
+    font-size: 1.2em;
+    margin: 0 0 5px;
+    color: #333;
+}
+
+.event-card p {
+    margin: 0;
+    color: #555;
 }

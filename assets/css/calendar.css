@@ -1,0 +1,34 @@
+body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    #calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 5px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .day {
+      padding: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .header {
+      font-weight: bold;
+      background-color: #eee;
+    }
+
+    .highlight {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #event-details {
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
