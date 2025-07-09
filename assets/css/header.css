@@ -1,5 +1,5 @@
 header {
-    background-color: red;
+    background-color: rgba(var(--secondary-color));
     min-height: 50px;
     box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -101,7 +101,4 @@ header {
     display: block;
 }
 
-.hamburger-nav {
-  display: none;
-}
 
