@@ -23,6 +23,7 @@ header {
     gap: 1px;
     height: 140px;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     letter-spacing: 3px;
     margin: auto;
@@ -34,12 +35,12 @@ header {
 .title h1 {
     color: rgba(var(--primary-color));
     font-family: "Ancizar Sans", sans-serif;
-    font-size: 60px;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     font-style: normal;
     font-weight: 800;
     text-align: center;
     padding-right: 100px;
-    height: 100px;
+    flex: 1 1 100%;
 }
 
 .anav {

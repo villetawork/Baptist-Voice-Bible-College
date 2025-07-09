@@ -2,21 +2,28 @@
 <html lang="en">
 <script>
     fetch('/assets/head.html')
-      .then(response => response.text())
-      .then(data => document.head.innerHTML = data);
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
 </script>
+
 <body>
     <div id="navigation"></div>
 
     <!-- main -->
-    <main>
-        
+    <main class="Admission">
+        <div class="bgoverview">
+            <div class="bgimgAd1"></div>
+            <div class="txtholder">
+                <h1>Admission & Requirements</h1>
+                <p>We are excited to welcome new learners to our growing BVBC family!<br>
+                    Below are the details you need to get started on your enrollment journey with us.</p>
+            </div>
+        </div>
+
     </main>
 
     <!-- footer -->
     <div id="footer"></div>
-    <script src="assets/js/sliders.js"></script>
-    <script src="assets/js/modal.js"></script>
     <script>
         function loadHTML(id, file) {
             fetch(file)

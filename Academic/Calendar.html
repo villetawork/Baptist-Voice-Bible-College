@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    fetch('/assets/head.html')
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
+</script>
+
+<body>
+    <div id="navigation"></div>
+
+    <!-- main -->
+    <main>
+        <h1>Event Calendar</h1>
+        <div class="nav">
+            <button id="prev-month">⏪ Previous</button>
+            <span id="month-label"></span>
+            <button id="next-month">Next ⏩</button>
+        </div>
+        <div id="calendar"></div>
+        <div id="event-details">Click a highlighted date to see event details.</div>
+
+        <script>
+            const calendar = document.getElementById("calendar");
+            const eventDetails = document.getElementById("event-details");
+            const monthLabel = document.getElementById("month-label");
+            const prevBtn = document.getElementById("prev-month");
+            const nextBtn = document.getElementById("next-month");
+
+            // Enter events
+            const events = {
+                "2025-07-04": "🎆 Independence Day",
+                "2025-07-10": "📅 Project Deadline",
+                "2025-08-15": "📚 Back to School",
+                "2025-09-01": "👷 Labor Day"
+            };
+
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+
+            let currentMonth = new Date().getMonth();
+            let currentYear = new Date().getFullYear();
+
+            function renderCalendar(month, year) {
+                calendar.innerHTML = "";
+                monthLabel.textContent = `${monthNames[month]} ${year}`;
+                eventDetails.innerHTML = "";
+
+                const firstDay = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                const headers = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                headers.forEach(day => {
+                    const div = document.createElement("div");
+                    div.className = "day header";
+                    div.textContent = day;
+                    calendar.appendChild(div);
+                });
+
+                for (let i = 0; i < firstDay; i++) {
+                    const empty = document.createElement("div");
+                    calendar.appendChild(empty);
+                }
+
+                for (let date = 1; date <= daysInMonth; date++) {
+                    const dayDiv = document.createElement("div");
+                    dayDiv.className = "day";
+                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+                    dayDiv.textContent = date;
+
+                    if (events[dateStr]) {
+                        dayDiv.classList.add("highlight");
+                    }
+
+                    calendar.appendChild(dayDiv);
+                }
+
+                const thisMonth = String(month + 1).padStart(2, '0');
+                const eventList = Object.keys(events)
+                    .filter(dateStr => {
+                        const [y, m] = dateStr.split("-");
+                        return Number(y) === year && m === thisMonth;
+                    })
+                    .sort()
+                    .map(dateStr => {
+                        const dateObj = new Date(dateStr);
+                        const options = { month: 'short', day: 'numeric' }; // e.g., Aug 6
+                        const formattedDate = dateObj.toLocaleDateString(undefined, options);
+                        return `
+                            <div class="event-card">
+                                <h1>${formattedDate}</h1>
+                                <p>${events[dateStr]}</p>
+                            </div>
+                        `;
+                    });
+
+                if (eventList.length > 0) {
+                    eventDetails.innerHTML = `<h3>Events This Month:</h3>${eventList.join("")}`;
+                } else {
+                    eventDetails.innerHTML = "No events this month.";
+                }
+
+            }
+
+            // Navigation handlers
+            prevBtn.addEventListener("click", () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+
+            nextBtn.addEventListener("click", () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+
+            // Initial render
+            renderCalendar(currentMonth, currentYear);
+        </script>
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+                .then(response => response.text())
+                .then(data => document.getElementById(id).innerHTML = data);
+        }
+        loadHTML('navigation', '/assets/navigation.html');
+        loadHTML('footer', '/assets/footer.html');
+    </script>
+</body>
+
+</html>
