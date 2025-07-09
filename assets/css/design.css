@@ -18,7 +18,7 @@ body {
     --text-color: #000000;    
     --accent-color: #850c0cf1;
     --highlight-color: 253, 230, 118;
-    --gold-color: 255, 224, 0;
+    --gold-color: 255, 255, 0;
     --text-white: 255, 255, 255;
     --shadow-dark: 0 6px 10px black;
     --shadow-dark2: 3px 4px 10px black;
@@ -36,11 +36,7 @@ body {
         top: 50%;
         transform: translateY(-50%);
     }
-
-    .introtxt h1 {
-        font-size: 40px;
-        line-height: 45px;
-    }
+    
 
     .introtxt h3 {
         font-size: 16px;
@@ -49,7 +45,93 @@ body {
     .introtxt p {
         font-size: 14px;
     }
+
+  }
+.hamburger-nav {
+  display: none;
 }
+
+#ham-icon {
+  background-color: #eee;
+  
+}
+
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-btn, .close-sidebar-btn {
+  display: none;
+}
+
+
+
+@media (max-width: 1080px) {
+  header {
+    display: none;
+  }
+
+.hamburger-nav {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #000;
+  }
+
+
+  .links-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: -200%;
+    z-index: 10;
+    width: 50vh;
+    background-color: #eee;
+    transition: 0.2s ease-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+
+  .open-sidebar-btn, .close-sidebar-btn {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    left: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
 
 /*-------------------- Social Media Icons --------------------*/
 .fa {
