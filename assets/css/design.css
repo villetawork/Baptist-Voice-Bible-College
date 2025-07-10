@@ -99,7 +99,7 @@ body {
     top: 0;
     left: -200%;
     z-index: 10;
-    width: 50vh;
+    width: 70vw;
     background-color: #eee;
     transition: 0.2s ease-out;
   }

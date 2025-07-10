@@ -103,3 +103,28 @@ header {
 }
 
 
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+}
+.item a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sub-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    background-color: #dbdbdb;
+}
+
+.item .sub-menu {
+    display: none;
+}
+
