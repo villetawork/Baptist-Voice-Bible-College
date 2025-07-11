@@ -55,14 +55,12 @@ main {
     position: absolute;
     left: 10%;
     top: 50%;
-    width: 27%;
     transform: translateY(-60%);
 }
 
 .introtxt h3 {
     color: rgba(var(--secondary-color), 1);
     font-size: 20px;
-    margin-left: 5px;
     text-align: left;
     font-family: "Poppins", sans-serif;
     line-height: 25px;
@@ -103,6 +101,9 @@ main {
     line-height: 70px;
     text-decoration: none;
     transition: var(--transition);
+    white-space: nowrap; /* Prevent text wrapping */
+    min-width: 200px;  /* Ensure minimum width for the button */
+    text-align: center; /* Ensure the text aligns properly */
 }
 
 .introtxt .button1 a:hover {
@@ -110,7 +111,6 @@ main {
     color: rgba(var(--primary-color), 1);
     font-size: 20px;
 }
-
 
 
 /*-------------------- SVG Transitions --------------------*/
@@ -236,167 +236,209 @@ main {
 
 /*-------------------- Explore Section --------------------*/
 .explore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100vh;
-    gap: 20px;
-    position: relative;
-}
-
-.explore .overlay1 {
-    background-color: rgba(0 0 0 / 52%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.explore .overlay2 {
-    background-color: rgba(125 10 10 / 73%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.explore {
-    background-image: url('/assets/img/Home/Background-imgs/BG1.png'), linear-gradient(rgba(var(--secondary-color), 0.5));
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-
-}
-
-
-.columnExplore {
-    flex-direction: column;
-    gap: 40px;
-    display: flex;
+    position: relative;    /* Make the container relative to allow for absolute positioning */
+    background-image: url('/assets/img/Home/Background-imgs/BG1.png');  /* Set your background image */
+    background-position: center center; /* Position the image at the center */
+    background-size: cover;  /* Make sure the image covers the entire container */
+    background-repeat: no-repeat;  /* Prevent repetition of the image */
+    background-attachment: fixed;  /* Ensure the background stays fixed during scrolling */
+    padding: 20px;  /* Add some padding */
     z-index: 1;
 }
 
-.WrapperExplore {
-    display: flex;
-    justify-content: center;
-    gap: 10%;
-    flex-wrap: wrap;
-    padding: 3px 3px 6rem;
-}
-
-.txtexplore {
-    display: inline-flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    font-size: 30px;
-}
-
-.txtexplore p {
-    font-size: 20px;
-    color: rgba(var(--secondary-color));
-}
-
-.txtexplore h1 {
-    color: rgba(var(--highlight-color));
-}
-
-.Excontainer {
-    width: 24vw;
-    height: 40rem;
-    background-color: rgba(var(--secondary-color), 1);
-    transition: 0.5s ease-out;
-    border-radius: 10px 10px 10px 10px;
-    -webkit-border-radius: 10px 10px 10px 10px;
-    -moz-border-radius: 10px 10px 10px 10px;
-    overflow: hidden;
-}
-
-.Excontainer:hover {
-    box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
-    -webkit-box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
-    -moz-box-shadow: 10px 10px 0px 0px rgba(var(--highlight-color), 0.75);
-}
-
-.imgcontainer {
-    overflow: hidden;
-    height: 43%;
-    position: relative;
-}
-
-.imgcontainer img {
-    object-fit: cover;
+.explore::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-20%, -10%);
-    width: 640px;
-}
-
-.txtExContainer {
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 18px;
-    text-align: center;
-    padding: 5%;
-    color: rgba(var(--primary-color));
-}
-
-.txtExContainer p {
-    color: black;
-}
-
-/*----------------College Dep.----------------*/
-.watermark {
-    background: url('/assets/img/logo/Logo.png') center no-repeat fixed;
-    opacity: .2;
     width: 100%;
-    height: 20vh;
-    z-index: -10;
+    height: 100%;
+    background: linear-gradient(rgba(128, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Color filter with low opacity */
+    opacity: 0.8;  /* Apply opacity to the background */
+    z-index: -1;  /* Ensure the background is behind the content */
 }
 
-.bgoverview {
-    overflow: hidden;
-    height: 32vh;
+.explore .collumn_explore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.explore .header_explore {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.explore .header_explore h1 {
+    font-size: 2rem;
+    color: rgba(var(--gold-color), 1);
+}
+
+.explore .header_explore p {
+    font-size: 1rem;
+    color: rgba(var(--secondary-color), 1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.explore .row_explore {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 70px;
     position: relative;
 }
 
-.bgoverview .overlay1 {
-    background: rgb(27 8 8 / 68%);
+.explore .container {
+    background-color: rgba(var(--primary-color), 0.8);
     width: 100%;
-    height: 100%;
+    max-width: 400px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 15px;
 }
 
-.bgimgC1 {
-    background: url('/assets/img/backgrounds/bg1.JPG') no-repeat 50% 24%/110rem;
-    height: 100%;
-    z-index: -1;
-    position: sticky;
-    opacity: .7;
+.explore .container:hover {
+    transform: scale(1.05);
 }
 
-.CollegeBody {
+.explore .container > .imgcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
+    width: 100%;
+    padding: 1.2rem;
+    height: 300px;
+    overflow: hidden;
+}
+
+.explore .container > .imgcontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.explore .container h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: rgba(var(--gold-color), 1);
+    margin: 20px 10px 0;
+}
+
+.explore .container p {
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    padding: 0 15px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+
+/*---------------- Basic Ed.----------------*/
+.bgimgBE1 {
+    background: url('/assets/img/backgrounds/bg2.JPG') no-repeat center center/cover;
+    height: 100%;
+    position: absolute;  /* Positioned at the top of the section */
+    width: 100%;
+    z-index: -1;  /* Place it behind the overlay */
+    opacity: 0.7;  /* You can adjust this value based on contrast */
+}
+
+
+/*----------------College Dep.----------------*/
+
+.bgimgC1 {
+    background: url('/assets/img/backgrounds/bg1.JPG') no-repeat center center/cover;
+    height: 100%;
+    position: absolute;  /* Positioned at the top of the section */
+    width: 100%;
+    z-index: -1;  /* Place it behind the overlay */
+    opacity: 0.7;  /* You can adjust this value based on contrast */
+}
+
+/* Apply watermark as background in the CollegeBody container without affecting child elements */
+.CollegeBody {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
     gap: 90px;
     flex-wrap: wrap;
     padding: 70px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);  /* Transparent background to show watermark behind */
 }
 
+/* Pseudo-element to handle watermark */
+.CollegeBody::before {
+    content: '';  /* Create an empty element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/assets/img/logo/Logo.png') center no-repeat fixed;
+    background-size: 30rem;  /* Ensure watermark covers the entire container */
+    opacity: 0.2;  /* Control watermark transparency */
+    z-index: -1;  /* Keep it behind the content */
+    pointer-events: none;  /* Make sure it doesn't interfere with interactions */
+}
+
+/* Course styling */
 .course {
-    background-color: #4CAF50;
+    background-color: rgba(var(--primary-color), 0.8);  /* Semi-transparent background */
     width: 400px;
     min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.course:hover {
+    transform: scale(1.05);  /* Optional zoom effect on hover */
+}
+
+.course > .imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.2rem;
+    height: 300px;
+    overflow: hidden;
+}
+
+.course > .imgcontainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.course h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+    margin: 20px 10px 0;
 }
 
 /* -------------------- Admission -------------------- */
