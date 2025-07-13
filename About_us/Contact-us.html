@@ -2,19 +2,38 @@
 <html lang="en">
 <script>
     fetch('/assets/head.html')
-      .then(response => response.text())
-      .then(data => document.head.innerHTML = data);
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
 </script>
+
 <body>
     <div id="navigation"></div>
 
     <!-- main -->
-    <main>
-        
+    <main class="Contact-us">
+        <div class="container">
+            <div class="contacttxt">
+                <h1>Contact Us</h1>
+                <div class="contact">
+                    <p>Email: example@email.com</p>
+                    <p>Location: Your Address Here</p>
+                    <p>Facebook: fb.com/yourpage</p>
+                    <p>Phone: +123 456 7890</p>
+                </div>
+            </div>
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.345782750194!2d121.59230671115652!3d13.938005286417166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd4b64c52000f7%3A0x1f54ef6ee1fd32e6!2sGrace%20Baptist%20Church%20Lucena%20City!5e0!3m2!1sen!2sph!4v1752412294392!5m2!1sen!2sph"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
     </main>
 
     <!-- footer -->
     <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
     <script>
         function loadHTML(id, file) {
             fetch(file)

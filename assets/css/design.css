@@ -1,3 +1,60 @@
+/*-------------------- loading screen --------------------*/
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  /* Change to your preferred background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  transition: opacity 0.8s ease;
+  /* fade-out transition */
+}
+
+.loading-screen.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  /* final opacity: fully visible */
+  display: block;
+}
+
+.logo-container::after {
+    content: '';
+    position: absolute;
+    top: 0; /* instead of bottom: 0 */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff; /* same as loading screen background */
+    animation: revealDown 2s forwards;
+}
+
+@keyframes revealDown {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+    }
+}
+
 /*-------------------- Reset and Base --------------------*/
 * {
   box-sizing: border-box;
@@ -36,12 +93,12 @@ body {
     top: 50%;
     transform: translateY(-50%);
   }
-  
-  
+
+
   .introtxt h3 {
     font-size: 16px;
   }
-  
+
   .introtxt p {
     font-size: 14px;
   }
@@ -49,145 +106,74 @@ body {
 }
 
 .bgoverview {
-    overflow: hidden;
-    height: 32vh;  /* Controls the height of the background section */
-    position: relative;
-    z-index: 1;
-  }
-  
-  .bgoverview .overlay1 {
-    background: rgba(27, 8, 8, 0.68);  /* Slightly transparent dark overlay */
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
+  overflow: hidden;
+  height: 32vh;
+  /* Controls the height of the background section */
+  position: relative;
+  z-index: 1;
+}
+
+.bgoverview .overlay1 {
+  background: rgba(27, 8, 8, 0.68);
+  /* Slightly transparent dark overlay */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 /*-------------- Responsive --------------*/
 
 /* ------------------ Burger (mobile nav) ------------------ */
 
-/* Base styles */
-.hamburger-nav {
+/* Base: hide hamburger on large screens */
+.hamburger {
   display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-#ham-icon {
-  background-color: #eee;
-}
-
-#sidebar-active {
-  display: none;
-}
-
-.open-sidebar-btn,
-.close-sidebar-btn {
-  display: none;
-}
-
-/* Link container for mobile menu */
-.links-container {
-  display: none;
-  height: 100%;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-}
-
-/* Menu items */
-.item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #eee;
-}
-
-.item > a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 15px 30px;
-  text-decoration: none;
-  color: #000;
-  box-sizing: border-box;
-}
-
-/* Dropdown submenu */
-.sub-menu {
-  width: 100%;
-  display: none;
-  flex-direction: column;
-  padding-left: 20px;
-  background-color: #dbdbdb;
-}
-
-.item.open .sub-menu {
-  display: flex;
-}
-
-/* Responsive styles */
+/* For small devices */
 @media (max-width: 1080px) {
-  header {
+  .hamburger {
+    display: block;
+    color: white; /* Adjust color to fit your navbar */
+  }
+
+  /* Hide nav links initially */
+  .anav {
     display: none;
-  }
-
-  .hamburger-nav {
-    display: flex;
-    position: fixed;
-    z-index: 10;
-  }
-
-  .open-sidebar-btn,
-  .close-sidebar-btn {
-    padding: 20px;
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-
-  nav a {
-    text-decoration: none;
-    color: #000;
-    width: 100%;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    display: block;
-  }
-
-  .links-container {
-    display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    left: -200%;
-    z-index: 10;
-    width: 70vw;
-    height: 100vh;
-    background-color: #eee;
-    transition: left 0.2s ease-out;
-    overflow-y: auto;
-  }
-
-  #sidebar-active:checked ~ .links-container {
-    left: 0;
-  }
-
-  #sidebar-active:checked ~ #overlay {
-    height: 100%;
+    background-color: #333; /* Adjust background if needed */
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  /* Show nav links when active */
+  .anav.active {
+    display: flex;
+  }
+
+  /* Adjust dropdowns to work vertically */
+  .dropdown, .sub-dropdown {
+    position: relative;
+  }
+  
+  .hover-items, .hover-sub-items {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    background: #444; /* Adjust as needed */
+  }
+
+  /* Show dropdown on click, not on hover */
+  .dropdown.active > .hover-items,
+  .sub-dropdown.active > .hover-sub-items {
+    display: flex;
   }
 }
-
 
 /*-------------------- Social Media Icons --------------------*/
 .fa {
@@ -216,3 +202,8 @@ footer {
   color: var(--text-color);
 }
 
+main.About_us {
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 2rem;
+}
