@@ -2,19 +2,130 @@
 <html lang="en">
 <script>
     fetch('/assets/head.html')
-      .then(response => response.text())
-      .then(data => document.head.innerHTML = data);
+        .then(response => response.text())
+        .then(data => document.head.innerHTML = data);
 </script>
+
 <body>
     <div id="navigation"></div>
 
     <!-- main -->
-    <main>
-        
+    <main class="About_us">
+        <h1 class="h1AboutUs">Baptist Voice Bible College</h1>
+        <div class="container History">
+            <h1>
+                Our Founding, Milestones, and Legacy
+            </h1>
+            <p>
+                Rooted in Faith. Growing with Purpose. <br>
+
+                Founded in 2000 by Grace Baptist Church, Baptist Voice Bible College (BVBC) began as a ministry to
+                provide Christ-centered education anchored in the Bible. Through the years, BVBC has grown from a small
+                school to a fully recognized institution offering quality basic and higher education. <br>
+
+                With milestones such as government recognition for our Kindergarten, Elementary, and Junior High
+                programs, and a 100% passing rate in the Licensure Examination for Teachers, BVBC continues to build a
+                lasting legacy—shaping lives for God's glory.
+            </p>
+        </div>
+        <div class="row_img_leadership">
+            <img src="" alt="">
+            <div class="container leadership">
+                <h1>
+                    Leadership & Administration
+                </h1>
+                <p>
+                    At BVBC, dedicated leaders and staff guide our mission with faith and professionalism. Our
+                    team—comprising officers, deans, and administrative staff—works collaboratively to provide a
+                    nurturing,
+                    organized, and effective learning environment. Each member is committed to upholding our school's
+                    values
+                    while supporting students' academic and spiritual growth.
+                </p>
+            </div>
+        </div>
+        <div class="Fcontainer MVC">
+            <h1 class="Mission">Mission</h1>
+            <p class="Mission">
+                To provide quality, Bible-based education that nurtures academic excellence, spiritual growth, and
+                strong character in every learner.
+            </p>
+            <h1 class="Vission">Vission</h1>
+            <p class="Vission">
+                To be a thriving Christian educational community where students grow in knowledge and faith, becoming
+                servant leaders who impact the world for Christ.
+            </p>
+            <h1 class="CoreValues">Core Values</h1>
+            <p class="CoreValues">
+                Faith — Grounding all we do in God's Word.
+
+                Integrity — Living with honesty and honor.
+
+                Excellence — Striving for the best in academics and character.
+
+                Service — Serving others with humility and love.
+
+                Community — Building supportive and caring relationships.
+            </p>
+        </div>
+        <br>
+        <div class="Fcontainer MessageofPresident">
+            <div class="containertxt ">
+                <h1>
+                    Welcome Address from the President of Baptist Vocie Bible College
+                </h1>
+                <h3>Dear Friends and Visitors,</h3>
+                <p>
+                    Greetings in the matchless name of our Lord and Savior Jesus Christ. <br><br>
+
+                    It is with sincere gratitude and heartfelt joy that I welcome you to the official website of
+                    <b>Baptist Voice Bible College</b>. We count it a great privilege to introduce you to the vision, values,
+                    and ministry of this institution, which exists solely for the glory of God and the advancement of the
+                    Gospel of Jesus Christ.<br><br>
+
+                    Founded upon the timeless truths of the Word of God and anchored in the historic Baptist faith, our
+                    college is committed to the training and preparation of dedicated men and women for faithful service
+                    in local churches, mission fields, and Christian ministries worldwide. As an Independent Baptist
+                    institution, we uphold the authority of Scripture, the autonomy of the local church, and the
+                    centrality of the Gospel in all that we do.<br><br>
+
+                    At BVBC, students are challenged academically, enriched spiritually, and equipped practically for
+                    the work of the ministry. Our programs are intentionally designed to develop biblically sound,
+                    spiritually mature, and ministry-ready servants of Christ. Through sound doctrinal instruction,
+                    fervent prayer, and real-world ministry experience, we aim to cultivate leaders who will remain
+                    steadfast in truth and faithful in service.<br><br>
+
+                    This website serves as a window into the life and labor of our college. Whether you are seeking a
+                    place to prepare for God's call upon your life, exploring opportunities to partner with us in prayer
+                    and support, or simply learning more about our mission, we are honored by your interest. I encourage
+                    you to explore the resources available here and to contact us should you desire further information
+                    or assistance.<br><br>
+
+                    On behalf of our faculty, staff, and student body, thank you for visiting. May the Lord richly bless
+                    you as you seek His will and serve His Kingdom.<br><br>
+
+                    For His Glory,<br>
+                    <b>Rudy Calayan</b><br>
+                    President<br>
+                    <b>Baptist Voice Bible College</b><br>
+                </p>
+            </div>
+            <img src="" alt="">
+        </div>
+        <div class="container Who-we-Are">
+            <div class="col_h1_gallery">
+                <h1>Who Are We</h1>
+                <div class="gallery">
+
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- footer -->
     <div id="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
     <script>
         function loadHTML(id, file) {
             fetch(file)

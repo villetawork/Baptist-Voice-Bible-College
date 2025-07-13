@@ -101,9 +101,12 @@ main {
     line-height: 70px;
     text-decoration: none;
     transition: var(--transition);
-    white-space: nowrap; /* Prevent text wrapping */
-    min-width: 200px;  /* Ensure minimum width for the button */
-    text-align: center; /* Ensure the text aligns properly */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    min-width: 200px;
+    /* Ensure minimum width for the button */
+    text-align: center;
+    /* Ensure the text aligns properly */
 }
 
 .introtxt .button1 a:hover {
@@ -236,13 +239,20 @@ main {
 
 /*-------------------- Explore Section --------------------*/
 .explore {
-    position: relative;    /* Make the container relative to allow for absolute positioning */
-    background-image: url('/assets/img/Home/Background-imgs/BG1.png');  /* Set your background image */
-    background-position: center center; /* Position the image at the center */
-    background-size: cover;  /* Make sure the image covers the entire container */
-    background-repeat: no-repeat;  /* Prevent repetition of the image */
-    background-attachment: fixed;  /* Ensure the background stays fixed during scrolling */
-    padding: 20px;  /* Add some padding */
+    position: relative;
+    /* Make the container relative to allow for absolute positioning */
+    background-image: url('/assets/img/Home/Background-imgs/BG1.png');
+    /* Set your background image */
+    background-position: center center;
+    /* Position the image at the center */
+    background-size: cover;
+    /* Make sure the image covers the entire container */
+    background-repeat: no-repeat;
+    /* Prevent repetition of the image */
+    background-attachment: fixed;
+    /* Ensure the background stays fixed during scrolling */
+    padding: 20px;
+    /* Add some padding */
     z-index: 1;
 }
 
@@ -253,9 +263,12 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(128, 0, 0, 0.4), rgba(0, 0, 0, 0.6)); /* Color filter with low opacity */
-    opacity: 0.8;  /* Apply opacity to the background */
-    z-index: -1;  /* Ensure the background is behind the content */
+    background: linear-gradient(rgba(128, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+    /* Color filter with low opacity */
+    opacity: 0.8;
+    /* Apply opacity to the background */
+    z-index: -1;
+    /* Ensure the background is behind the content */
 }
 
 .explore .collumn_explore {
@@ -314,7 +327,7 @@ main {
     transform: scale(1.05);
 }
 
-.explore .container > .imgcontainer {
+.explore .container>.imgcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,7 +337,7 @@ main {
     overflow: hidden;
 }
 
-.explore .container > .imgcontainer img {
+.explore .container>.imgcontainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -352,55 +365,59 @@ main {
 .bgimgBE1 {
     background: url('/assets/img/backgrounds/bg2.JPG') no-repeat center center/cover;
     height: 100%;
-    position: absolute;  /* Positioned at the top of the section */
+    position: absolute;
+    /* Positioned at the top of the section */
     width: 100%;
-    z-index: -1;  /* Place it behind the overlay */
-    opacity: 0.7;  /* You can adjust this value based on contrast */
+    z-index: -1;
+    /* Place it behind the overlay */
+    opacity: 0.7;
+    /* You can adjust this value based on contrast */
 }
 
 
 /*----------------College Dep.----------------*/
-
-.bgimgC1 {
-    background: url('/assets/img/backgrounds/bg1.JPG') no-repeat center center/cover;
-    height: 100%;
-    position: absolute;  /* Positioned at the top of the section */
-    width: 100%;
-    z-index: -1;  /* Place it behind the overlay */
-    opacity: 0.7;  /* You can adjust this value based on contrast */
-}
-
-/* Apply watermark as background in the CollegeBody container without affecting child elements */
 .CollegeBody {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    gap: 90px;
+    flex-direction: column;
+    gap: 40px;
     flex-wrap: wrap;
     padding: 70px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0);  /* Transparent background to show watermark behind */
+    background-color: rgba(255, 255, 255, 0);
 }
 
-/* Pseudo-element to handle watermark */
 .CollegeBody::before {
-    content: '';  /* Create an empty element */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url('/assets/img/logo/Logo.png') center no-repeat fixed;
-    background-size: 30rem;  /* Ensure watermark covers the entire container */
-    opacity: 0.2;  /* Control watermark transparency */
-    z-index: -1;  /* Keep it behind the content */
-    pointer-events: none;  /* Make sure it doesn't interfere with interactions */
+    background-size: 30rem;
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
 }
 
-/* Course styling */
+.col_college {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.row-college {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
 .course {
-    background-color: rgba(var(--primary-color), 0.8);  /* Semi-transparent background */
+    background-color: rgba(var(--primary-color), 0.8);
     width: 400px;
     min-height: 60vh;
     display: flex;
@@ -414,10 +431,10 @@ main {
 }
 
 .course:hover {
-    transform: scale(1.05);  /* Optional zoom effect on hover */
+    transform: scale(1.05);
 }
 
-.course > .imgcontainer {
+.course>.imgcontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,7 +444,7 @@ main {
     overflow: hidden;
 }
 
-.course > .imgcontainer img {
+.course>.imgcontainer img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -543,4 +560,90 @@ main {
 .event-card p {
     margin: 0;
     color: #555;
+}
+
+
+
+
+
+/* ------------------- Contact Us ------------------- */
+
+main.Contact-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* container: column layout: contact info on top, map below */
+main.Contact-us .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 20px;
+    width: 800px;
+    gap: 100px; /* space between contact and map */
+}
+
+/* contacttxt: column layout: title then info */
+.contacttxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    gap: 20px;
+}
+
+/* Map container: holds the map centered */
+.map {
+    width: 100%;
+    max-width: 1900px;  /* adjust as needed */
+    aspect-ratio: 16 / 9;  /* keeps it in 16:9 ratio */
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Optional: style for heading and contact info */
+.contacttxt h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contacttxt .contact p {
+    margin: 5px 0;
+}
+
+
+/* ------------------- Contact Us ------------------- */
+main.About_us h1.h1AboutUs {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main.About_us .History{
+    /* width: 1090px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main.About_us .row_img_leadership{
+    /* width: 1090px; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Fcontainer {
+    background: #afafaf;
+}
+
+.Fcontainer .Mission {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Fcontainer .Vission {
+    display: flex;
+    justify-content: flex-end;
 }

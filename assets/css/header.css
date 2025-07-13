@@ -44,7 +44,7 @@ header {
 }
 
 .anav {
-    Display: flex;
+    display: flex;
     align-items: center;
     font-size: 17px;
     gap: 1rem;
@@ -81,7 +81,7 @@ header {
     max-width: 220px;
     min-width: 160px;
     position: absolute;
-    z-index: 1;
+    z-index: 10;
     margin-top: 13px;
     transition: 3s ease-in-out;
 }
@@ -101,6 +101,38 @@ header {
 .dropdown:hover .hover-items {
     display: block;
 }
+/* Sub-dropdown for Academics → BasicEd & College Department */
+.sub-dropdown {
+  position: relative;
+}
+
+.hover-sub-items {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.sub-dropdown:hover .hover-sub-items {
+  display: block;
+}
+
+.hover-sub-items a {
+  color: #000;
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.hover-sub-items a:hover {
+  background: rgba(var(--dark-color),0.1);
+  color: #ff0000;
+}
+
+
 /* 
 
 .item {
