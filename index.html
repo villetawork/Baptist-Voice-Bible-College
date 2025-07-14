@@ -138,6 +138,8 @@
     <div id="footer"></div>
     <script src="assets/js/sliders.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
     <script>
         function loadHTML(id, file) {
             fetch(file)
@@ -147,28 +149,6 @@
         loadHTML('navigation', '/assets/navigation.html');
         loadHTML('footer', '/assets/footer.html');
     </script>
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Optional: toggle dropdowns on small screens
-        const dropdowns = document.querySelectorAll('.dropdown > a');
-
-        dropdowns.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const parent = link.parentElement;
-                if (window.innerWidth <= 1080) {
-                    e.preventDefault(); // prevent navigation
-                    parent.classList.toggle('active');
-                }
-            });
-        });
-    </script>
-
 
 
 </body>
