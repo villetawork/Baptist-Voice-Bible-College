@@ -1,18 +1,12 @@
 //------------------ mobile menu --------------------//
-const menuToggle = document.querySelector('.menu-toggle');
-const linksContainer = document.querySelector('.links-container');
-const subBtns = document.querySelectorAll('.sub-btn');
 
-menuToggle.addEventListener('click', () => {
-  linksContainer.classList.toggle('open');
-});
-
-subBtns.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    btn.parentElement.classList.toggle('open');
-  });
-});
+    $(document).ready(function() {
+        $(document).on('click', '.sub-btn', function() {
+            $(this).next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+        })
+    })
+    
 //---------------- loading screen ------------------//
 
 
@@ -21,5 +15,5 @@ window.addEventListener('load', () => {
     // Delay a bit so animation finishes smoothly
     setTimeout(() => {
         document.getElementById('loadingScreen').classList.add('hide');
-    }, 4000); // adjust to match animation duration
+    }, 2000); // adjust to match animation duration
 });
