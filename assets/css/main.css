@@ -155,86 +155,90 @@ main {
 }
 
 /*-------------------- Slider --------------------*/
-.slider {
-    margin: auto;
-    min-width: 100%;
-    overflow: hidden;
-    position: relative;
+.carousel {
+  background-color: #800000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+  height: 85vh;
+  position: relative; /* make sure .list and .swipe are positioned relative to this */
 }
 
-.fade img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    vertical-align: middle;
+.carousel .list {
+  height: 200px;
+  width: 100%;
+  max-width: 600px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 30%);
 }
 
-.count {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
+.carousel .list li {
+  width: 100%;
+  max-width: 600px; /* set max size */
+  height: auto;
+  aspect-ratio: 1 / 1; /* optional: keeps it square */
+  opacity: 0.25;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: #9C89B8;
+  transition: transform 1s, opacity 1s;
 }
 
-.prev,
-.next {
-    position: absolute;
-    top: 40%;
-    padding: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    user-select: none;
-    transition: var(--transition);
-    color: #666;
+.carousel .list li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
-.prev {
-    border-radius: 0 3px 3px 0;
-    left: 0;
+/* Position states */
+.carousel .list .act {
+  opacity: 1;
+  z-index: 2;
+  transform: translateX(-50%) scale(1);
 }
 
-.next {
-    border-radius: 3px 0 0 3px;
-    right: 0;
+.carousel .list .prev,
+.carousel .list .next {
+  cursor: pointer;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--secondary-color);
+.carousel .list .prev {
+  transform: translateX(-880px) scale(0.85);
+}
+.carousel .list .next {
+  transform: translateX(280px) scale(0.85);
 }
 
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 4px;
-    background-color: rgba(41, 41, 41, 0.39);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-    transition: background-color var(--transition);
+/* Off-screen (hidden) cards */
+.carousel .list .hide {
+  transform: translateX(-480px) scale(0.75);
+}
+.carousel .list .new-next {
+  transform: translateX(480px) scale(0.75);
 }
 
-.active,
-.dot:hover {
-    background-color: var(--highlight-color);
+.carousel .list .hide,
+.carousel .list .new-next {
+  opacity: 0;
 }
 
-.fade {
-    display: none;
-    line-height: 300px;
-    animation: fade 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-
-    to {
-        opacity: 1;
-    }
+/* Swipe area (invisible but interactive) */
+.swipe {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
 /*-------------------- Explore Section --------------------*/
@@ -409,6 +413,7 @@ main {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
+
 .row-college {
     display: flex;
     flex-direction: row;
@@ -416,6 +421,7 @@ main {
     gap: 90px;
     flex-wrap: wrap;
 }
+
 .course {
     background-color: rgba(var(--primary-color), 0.8);
     width: 400px;
@@ -578,11 +584,12 @@ main.Contact-us {
 main.Contact-us .container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: flex-start;
     padding: 20px;
     width: 800px;
-    gap: 100px; /* space between contact and map */
+    gap: 100px;
+    /* space between contact and map */
 }
 
 /* contacttxt: column layout: title then info */
@@ -598,11 +605,13 @@ main.Contact-us .container {
 /* Map container: holds the map centered */
 .map {
     width: 100%;
-    max-width: 1900px;  /* adjust as needed */
-    aspect-ratio: 16 / 9;  /* keeps it in 16:9 ratio */
+    max-width: 1900px;
+    /* adjust as needed */
+    aspect-ratio: 16 / 9;
+    /* keeps it in 16:9 ratio */
     border: 0;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Optional: style for heading and contact info */
@@ -622,13 +631,13 @@ main.About_us h1.h1AboutUs {
     justify-content: flex-end;
 }
 
-main.About_us .History{
+main.About_us .History {
     /* width: 1090px; */
     display: flex;
     flex-wrap: wrap;
 }
 
-main.About_us .row_img_leadership{
+main.About_us .row_img_leadership {
     /* width: 1090px; */
     display: flex;
     flex-wrap: wrap;

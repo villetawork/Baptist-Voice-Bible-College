@@ -103,6 +103,7 @@ body {
     font-size: 14px;
   }
 
+  
 }
 
 .bgoverview {
@@ -246,6 +247,51 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
   }
 }
+
+
+@media (max-width: 768px) {
+  .carousel .list li {
+    max-width: 350px;
+  }
+
+  .carousel .list .prev {
+    transform: translateX(-180px) scale(0.8);
+  }
+  .carousel .list .next {
+    transform: translateX(180px) scale(0.8);
+  }
+
+  .carousel .list .hide {
+    transform: translateX(-300px) scale(0.7);
+  }
+
+  .carousel .list .new-next {
+    transform: translateX(300px) scale(0.7);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel .list li {
+    max-width: 240px;
+  }
+
+  .carousel .list .prev {
+    transform: translateX(-140px) scale(0.75);
+  }
+  .carousel .list .next {
+    transform: translateX(140px) scale(0.75);
+  }
+
+  .carousel .list .hide {
+    transform: translateX(-240px) scale(0.65);
+  }
+
+  .carousel .list .new-next {
+    transform: translateX(240px) scale(0.65);
+  }
+}
+
+
 /*-------------------- Social Media Icons --------------------*/
 .fa {
   font-size: 30px;
