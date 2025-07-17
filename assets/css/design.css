@@ -124,6 +124,18 @@ body {
   left: 0;
 }
 
+.bgoverview h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  color: rgba(var(--bs-secondary-bg-rgb));
+  font-size: 80px;
+  padding: 17px;
+  margin-top: 17px;
+  font-weight: 700;
+}
+
 /*-------------- Responsive --------------*/
 
 /* ------------------ Burger (mobile nav) ------------------ */
