@@ -86,6 +86,37 @@ body {
 
 
 /*---------------------- Main ----------------------*/
+
+@media (max-width: 480px) {
+  
+  
+  main.Admission .txtholder h1{
+    font-size: 2rem;
+  }
+  
+  .admissionBody {
+    padding: 5vh;
+  }
+  
+}
+@media (min-width: 480px) {
+  
+  
+  main.Admission .txtholder h1{
+    font-size: 2rem;
+  }
+  
+  .admissionBody {
+    padding: 5vh;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .admissionBody {
+    padding: 10vh;
+  }
+}
 @media (max-width: 768px) {
   .introtxt {
     width: 80%;
@@ -103,7 +134,6 @@ body {
     font-size: 14px;
   }
 
-  
 }
 
 .bgoverview {
@@ -258,6 +288,7 @@ body {
     z-index: 9;
     background-color: rgba(0, 0, 0, 0.3);
   }
+  
 }
 
 
@@ -280,6 +311,8 @@ body {
   .carousel .list .new-next {
     transform: translateX(300px) scale(0.7);
   }
+
+  
 }
 
 @media (max-width: 480px) {
@@ -301,6 +334,8 @@ body {
   .carousel .list .new-next {
     transform: translateX(240px) scale(0.65);
   }
+
+  
 }
 
 
@@ -329,10 +364,4 @@ footer {
   background-color: var(--text-color);
   padding: 20px;
   color: var(--text-color);
-}
-
-main.About_us {
-  padding-left: 15rem;
-  padding-right: 15rem;
-  padding-top: 2rem;
 }
