@@ -1,84 +1,54 @@
-/*------------------ Footer -------------------*/
-
-
-footer {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgba(var(--secondary-color));
+.footer-logo img {
+  width: 120px;
+  height: auto;
 }
 
-.ft_container {
-    display: flex;
-    gap: 1rem;
-    margin-top: 50px;
-    margin: auto;
-    max-width: 100%;
-    justify-content: center;
-    padding: 2rem 0;
-    flex-wrap: wrap;
+.footer-logo h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
 }
 
-.flogo {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
+.footer-section h5 {
+  font-weight: bold;
 }
 
-.flogo h1 {
-    color: rgba(var(--primary-color));
-    font-size: 50px;
+.social-icon {
+  font-size: 1.5rem;
+  background-color: var(--highlight-color);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.material-icons {
+  vertical-align: middle;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .footer-logo,
+  .footer-section {
     text-align: center;
-}
-
-.footer_description {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    margin-right: 3rem;
-    width: 450px;
-}
-
-.footer_description .textwidget {
-    align-items: center;
-    color: rgba(var(--text-color));
-    display: flex;
-    flex-direction: column;
-    max-width: 50rem;
-    text-align: left;
-}
-
-.quick {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    width: 270px;
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-}
-
-.contact ul li {
-    color: rgba(var(--text-color));
-    list-style-type: none;
-    margin: 5px;
-}
-
-.quick ul li {
-    color: rgba(var(--text-color));
-    list-style-type: none;
-    margin: 7px;
-}
-
-footer a {
-    color: rgba(var(--text-color));
-}
-
-#footertxt {
-    color: rgba(var(--text-color));
+  }
 }

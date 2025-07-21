@@ -1,147 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    fetch('/assets/head.html')
-        .then(response => response.text())
-        .then(data => document.head.innerHTML = data);
-</script>
+  <script>
+    fetch("/assets/head.html")
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
 
-<body>
+  <body>
     <div id="navigation"></div>
 
     <!-- main -->
-    <main>
-        <h1>Event Calendar</h1>
-        <div class="nav">
-            <button id="prev-month">⏪ Previous</button>
-            <span id="month-label"></span>
-            <button id="next-month">Next ⏩</button>
-        </div>
-        <div id="calendar"></div>
-        <div id="event-details">Click a highlighted date to see event details.</div>
+    <main class="calendar">
+      <h1>Event Calendar</h1>
 
-        <script>
-            const calendar = document.getElementById("calendar");
-            const eventDetails = document.getElementById("event-details");
-            const monthLabel = document.getElementById("month-label");
-            const prevBtn = document.getElementById("prev-month");
-            const nextBtn = document.getElementById("next-month");
+      <div class="filter">
+        <label for="event-filter">Show: </label>
+        <select id="event-filter">
+          <option value="all">All Events</option>
+          <option value="college">College Only</option>
+          <option value="basicEd">Basic Ed Only</option>
+        </select>
+      </div>
 
-            // Enter events
-            const events = {
-                "2025-07-04": "🎆 Independence Day",
-                "2025-07-10": "📅 Project Deadline",
-                "2025-08-15": "📚 Back to School",
-                "2025-09-01": "👷 Labor Day",
-                "2025-05-25": "sir ac bdayy"
-            };
+      <div class="nav">
+        <button id="prev-month">⏪ Previous</button>
+        <span id="month-label"></span>
+        <button id="next-month">Next ⏩</button>
+      </div>
 
-            const monthNames = [
-                "January", "February", "March", "April", "May", "June",
-                "July", "August", "September", "October", "November", "December"
-            ];
+      <div class="legend">
+        <span><span class="legend-box college"></span> College</span>
+        <span><span class="legend-box basicEd"></span> Basic Ed</span>
+        <span><span class="legend-box both"></span> Both</span>
+      </div>
 
-            let currentMonth = new Date().getMonth();
-            let currentYear = new Date().getFullYear();
-
-            function renderCalendar(month, year) {
-                calendar.innerHTML = "";
-                monthLabel.textContent = `${monthNames[month]} ${year}`;
-                eventDetails.innerHTML = "";
-
-                const firstDay = new Date(year, month, 1).getDay();
-                const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-                const headers = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-                headers.forEach(day => {
-                    const div = document.createElement("div");
-                    div.className = "day header";
-                    div.textContent = day;
-                    calendar.appendChild(div);
-                });
-
-                for (let i = 0; i < firstDay; i++) {
-                    const empty = document.createElement("div");
-                    calendar.appendChild(empty);
-                }
-
-                for (let date = 1; date <= daysInMonth; date++) {
-                    const dayDiv = document.createElement("div");
-                    dayDiv.className = "day";
-                    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
-                    dayDiv.textContent = date;
-
-                    if (events[dateStr]) {
-                        dayDiv.classList.add("highlight");
-                    }
-
-                    calendar.appendChild(dayDiv);
-                }
-
-                const thisMonth = String(month + 1).padStart(2, '0');
-                const eventList = Object.keys(events)
-                    .filter(dateStr => {
-                        const [y, m] = dateStr.split("-");
-                        return Number(y) === year && m === thisMonth;
-                    })
-                    .sort()
-                    .map(dateStr => {
-                        const dateObj = new Date(dateStr);
-                        const options = { month: 'short', day: 'numeric' }; // e.g., Aug 6
-                        const formattedDate = dateObj.toLocaleDateString(undefined, options);
-                        return `
-                            <div class="event-card">
-                                <h1>${formattedDate}</h1>
-                                <p>${events[dateStr]}</p>
-                            </div>
-                        `;
-                    });
-
-                if (eventList.length > 0) {
-                    eventDetails.innerHTML = `<h3>Events This Month:</h3>${eventList.join("")}`;
-                } else {
-                    eventDetails.innerHTML = "No events this month.";
-                }
-
-            }
-
-            // Navigation handlers
-            prevBtn.addEventListener("click", () => {
-                currentMonth--;
-                if (currentMonth < 0) {
-                    currentMonth = 11;
-                    currentYear--;
-                }
-                renderCalendar(currentMonth, currentYear);
-            });
-
-            nextBtn.addEventListener("click", () => {
-                currentMonth++;
-                if (currentMonth > 11) {
-                    currentMonth = 0;
-                    currentYear++;
-                }
-                renderCalendar(currentMonth, currentYear);
-            });
-
-            // Initial render
-            renderCalendar(currentMonth, currentYear);
-        </script>
+      <div id="calendar"></div>
+      <div id="event-details">
+        Click a highlighted date to see event details.
+      </div>
     </main>
+
+    <script>
+      const calendar = document.getElementById("calendar");
+      const eventDetails = document.getElementById("event-details");
+      const monthLabel = document.getElementById("month-label");
+      const prevBtn = document.getElementById("prev-month");
+      const nextBtn = document.getElementById("next-month");
+      const eventFilter = document.getElementById("event-filter");
+
+      const events = [
+        {
+          name: "🎆 Independence Day",
+          start: "2025-07-04",
+          end: "2025-07-04",
+          type: ["basicEd"],
+        },
+        {
+          name: "📅 Project Deadline",
+          start: "2025-07-10",
+          end: "2025-07-10",
+          type: ["college"],
+        },
+        {
+          name: "🏕 Multi-Day Camp",
+          start: "2025-07-15",
+          end: "2025-07-18",
+          type: ["college", "basicEd"],
+        },
+        {
+          name: "📚 Back to School",
+          start: "2025-08-15",
+          end: "2025-08-15",
+          type: ["basicEd"],
+        },
+        {
+          name: "👷 Labor Day",
+          start: "2025-09-01",
+          end: "2025-09-01",
+          type: ["basicEd"],
+        },
+        {
+          name: "Sir AC Birthday",
+          start: "2025-05-25",
+          end: "2025-05-25",
+          type: ["college"],
+        },
+        {
+          name: "🏫 School and Uni Orientation",
+          start: "2025-09-15",
+          end: "2025-09-15",
+          type: ["college", "basicEd"],
+        },
+      ];
+
+      const monthNames = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+      ];
+
+      let currentMonth = new Date().getMonth();
+      let currentYear = new Date().getFullYear();
+
+      function renderCalendar(month, year) {
+        calendar.innerHTML = "";
+        monthLabel.textContent = `${monthNames[month]} ${year}`;
+        eventDetails.innerHTML = "";
+
+        const selectedFilter = eventFilter.value;
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        const headers = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        headers.forEach((day) => {
+          const div = document.createElement("div");
+          div.className = "day header";
+          div.textContent = day;
+          calendar.appendChild(div);
+        });
+
+        for (let i = 0; i < firstDay; i++) {
+          const empty = document.createElement("div");
+          calendar.appendChild(empty);
+        }
+
+        for (let date = 1; date <= daysInMonth; date++) {
+          const dayDiv = document.createElement("div");
+          dayDiv.className = "day";
+          const dateStr = `${year}-${String(month + 1).padStart(
+            2,
+            "0"
+          )}-${String(date).padStart(2, "0")}`;
+          dayDiv.textContent = date;
+
+          const matchingEvents = events.filter((evt) => {
+            const eventStart = new Date(evt.start);
+            const eventEnd = new Date(evt.end);
+            const currentDate = new Date(dateStr);
+            return (
+              currentDate >= eventStart &&
+              currentDate <= eventEnd &&
+              (selectedFilter === "all" || evt.type.includes(selectedFilter))
+            );
+          });
+
+          if (matchingEvents.length > 0) {
+            const types = new Set(matchingEvents.flatMap((e) => e.type));
+            const isCollege = types.has("college");
+            const isBasicEd = types.has("basicEd");
+
+            if (isCollege && isBasicEd) {
+              dayDiv.classList.add("highlight-both");
+            } else if (isCollege) {
+              dayDiv.classList.add("highlight-college");
+            } else if (isBasicEd) {
+              dayDiv.classList.add("highlight-basicEd");
+            }
+          }
+
+          calendar.appendChild(dayDiv);
+        }
+
+        const eventList = events
+          .filter((evt) => {
+            const start = new Date(evt.start);
+            const end = new Date(evt.end);
+            const inMonth =
+              (start.getFullYear() === year && start.getMonth() === month) ||
+              (end.getFullYear() === year && end.getMonth() === month);
+            const matchesFilter =
+              selectedFilter === "all" || evt.type.includes(selectedFilter);
+            return inMonth && matchesFilter;
+          })
+          .sort((a, b) => new Date(a.start) - new Date(b.start))
+          .map((evt) => {
+            const startDate = new Date(evt.start);
+            const endDate = new Date(evt.end);
+            const options = { month: "short", day: "numeric" };
+
+            const dateRange =
+              evt.start === evt.end
+                ? startDate.toLocaleDateString(undefined, options)
+                : `${startDate.toLocaleDateString(
+                    undefined,
+                    options
+                  )} – ${endDate.toLocaleDateString(undefined, options)}`;
+
+            return `
+            <div class="event-card">
+              <h1>${dateRange}</h1>
+              <p>${evt.name}</p>
+            </div>
+          `;
+          });
+
+        eventDetails.innerHTML = eventList.length
+          ? `<h3>Events This Month:</h3>${eventList.join("")}`
+          : "No events this month.";
+      }
+
+      // Navigation
+      prevBtn.addEventListener("click", () => {
+        currentMonth--;
+        if (currentMonth < 0) {
+          currentMonth = 11;
+          currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+
+      nextBtn.addEventListener("click", () => {
+        currentMonth++;
+        if (currentMonth > 11) {
+          currentMonth = 0;
+          currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+      });
+
+      eventFilter.addEventListener("change", () => {
+        renderCalendar(currentMonth, currentYear);
+      });
+
+      renderCalendar(currentMonth, currentYear);
+    </script>
 
     <!-- footer -->
     <div id="footer"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-        loadHTML('navigation', '/assets/navigation.html');
-        loadHTML('footer', '/assets/footer.html');
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
-</body>
-
+  </body>
 </html>

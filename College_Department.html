@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    fetch('/assets/head.html')
-        .then(response => response.text())
-        .then(data => document.head.innerHTML = data);
-</script>
+  <script>
+    fetch("/assets/head.html")
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
 
-<body>
+  <body>
     <div id="navigation"></div>
 
     <!-- main -->
     <main class="CollegeMain">
-        <div class="bgoverview">
-            <div class="bgimgC1">
-                <div class="overlay1"></div>
-            </div>
-            <h1>College Overview</h1>
+      <div class="bgoverview">
+        <div class="bgimgC1">
+          <div class="overlay1"></div>
         </div>
+        <h1>College Overview</h1>
+      </div>
 
-        <div class="CollegeBody">
-            <div class="col_college">
-                <h1>Programs</h1>
-                <p></p>
-            </div>
-            <div class="row-college">
-                <div class="course BTH">
-                    <div class="imgcontainer">
-                        <img src="/assets/img/placeholder1.jpg" alt="Bachelor in Theology Image" />
-                    </div>
-                    <h1>Bachelor in Theology (BTh)</h1>
-                </div>
-                <div class="course BSCeD">
-                    <div class="imgcontainer">
-                        <img src="/assets/img/placeholder2.webp"
-                            alt="Bachelor of Science in Christian Education Image" />
-                    </div>
-                    <h1>Bachelor of Science in Christian Education (BSCeD)</h1>
-                </div>
-            </div>
+      <div class="CollegeBody">
+        <div class="col_college">
+          <h1>Programs</h1>
+          <p></p>
         </div>
-
+        <div class="row-college">
+          <div class="course BTH">
+            <div class="imgcontainer">
+              <img
+                src="/assets/img/placeholder1.jpg"
+                alt="Bachelor in Theology Image"
+              />
+            </div>
+            <h1>Bachelor in Theology (BTh)</h1>
+          </div>
+          <div class="course BSCeD">
+            <div class="imgcontainer">
+              <img
+                src="/assets/img/placeholder2.webp"
+                alt="Bachelor of Science in Christian Education Image"
+              />
+            </div>
+            <h1>Bachelor of Science in Christian Education (BSCeD)</h1>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -48,14 +52,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-        loadHTML('navigation', '/assets/navigation.html');
-        loadHTML('footer', '/assets/footer.html');
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
-</body>
-
+  </body>
 </html>
