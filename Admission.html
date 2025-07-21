@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    fetch('/assets/head.html')
-        .then(response => response.text())
-        .then(data => document.head.innerHTML = data);
-</script>
+  <script>
+    fetch("/assets/head.html")
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
 
-<body>
+  <body>
     <div id="navigation"></div>
 
     <!-- main -->
     <main class="Admission">
-        <div class="bgoverview">
-            <div class="bgimgAd1"></div>
-            <div class="txtholder">
-                <h1>Admission & Requirements</h1>
-                <p>We are excited to welcome new learners to our growing BVBC family!<br>
-                    Below are the details you need to get started on your enrollment journey with us.</p>
-            </div>
+      <div class="bgoverview">
+        <div class="bgimgAd1"></div>
+        <div class="txtholder">
+          <h1>Admission & Requirements</h1>
+          <p>
+            We are excited to welcome new learners to our growing BVBC
+            family!<br />
+            Below are the details you need to get started on your enrollment
+            journey with us.
+          </p>
         </div>
-        <div class="admissionBody">
-            <div class="enrollment_process">
-                <h2>Enrollment Process</h2>
-                <ol>
-                    <li>
-                        <p><b>Incquire</b> - Visit our campus or contact our office to begin the admission process.</p>
-                    </li>
-                    <li>
-                        <p><b>Submit Requirements</b> - Provide the required documents for evaluation.</p>
-                    </li>
-                    <li>
-                        <p><b>Student Assessment</b> - Applicants may be asked to complete an academic readiness test or attend an interview.</p>
-                    </li>
-                    <li>
-                        <p><b>Confirmation & Payment</b> - Once accepted, complete payment and attent the orientation session.</p>
-                    </li>
-                </ol>
-            </div>
-            <hr>
-            <div class="age_eligibility">
-                <h2>Age Eligibility</h2>
-                <ul>
-                    <li>
-                        <p><b>Kindergarten</b> - Must be <b>5 years old</b> by <b>October 31</b>of the current school year.</p>
-                    </li>
-                    <li>
-                        <p><b>Elementary</b> - Must be <b>6 years old</b> by <b>October 31</b>of the current school year.</p>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <div class="admissionBody">
+        <div class="enrollment_process">
+          <h2>Enrollment Process</h2>
+          <ol>
+            <li>
+              <p>
+                <b>Incquire</b> - Visit our campus or contact our office to
+                begin the admission process.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Submit Requirements</b> - Provide the required documents for
+                evaluation.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Student Assessment</b> - Applicants may be asked to complete
+                an academic readiness test or attend an interview.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Confirmation & Payment</b> - Once accepted, complete payment
+                and attent the orientation session.
+              </p>
+            </li>
+          </ol>
         </div>
+        <hr />
+        <div class="age_eligibility">
+          <h2>Age Eligibility</h2>
+          <ul>
+            <li>
+              <p>
+                <b>Kindergarten</b> - Must be <b>5 years old</b> by
+                <b>October 31</b>of the current school year.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>Elementary</b> - Must be <b>6 years old</b> by
+                <b>October 31</b>of the current school year.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -57,14 +79,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-        loadHTML('navigation', '/assets/navigation.html');
-        loadHTML('footer', '/assets/footer.html');
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
-</body>
-
+  </body>
 </html>

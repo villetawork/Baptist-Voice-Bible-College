@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    fetch('/assets/head.html')
-      .then(response => response.text())
-      .then(data => document.head.innerHTML = data);
-</script>
-<body>
+  <script>
+    fetch("/assets/head.html")
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
+  <body>
     <div id="navigation"></div>
 
     <!-- main -->
-    <main>
-        <main class="BasicEdMain">
-        <div class="bgoverview">
-            <div class="bgimgBE1">
-                <div class="overlay1"></div>
-            </div>
-            <h1>Basic Education</h1>
+
+    <main class="BasicEdMain">
+      <div class="bgoverview">
+        <div class="bgimgBE1">
+          <div class="overlay1"></div>
         </div>
-       
+        <h1>Basic Education</h1>
+      </div>
     </main>
 
     <!-- footer -->
@@ -25,14 +24,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-        loadHTML('navigation', '/assets/navigation.html');
-        loadHTML('footer', '/assets/footer.html');
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
-</body>
-
+  </body>
 </html>

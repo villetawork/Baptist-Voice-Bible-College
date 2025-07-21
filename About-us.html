@@ -1,99 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    fetch('/assets/head.html')
-        .then(response => response.text())
-        .then(data => document.head.innerHTML = data);
-</script>
+  <script>
+    fetch("/assets/head.html")
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
 
-<body>
+  <body>
     <div id="navigation"></div>
 
     <!-- main -->
     <main class="About_us">
-        <div class="aboutus">
-            <div class="aboutus-container">
-                <button class="learn-more">
-                    <span class="button-text">Learn More</span>
-                    <span class="arrow-icon"></span>
-                </button>
-            </div>
-
-            <div class="aboutus-dropdown">
-                <p>
-                    Baptist Voice Bible College, also known as BVBC, is a private school that offers foundational and
-                    higher
-                    education. It has been operated and managed by Grace Baptist Church since 2000. The Basic Education
-                    Department utilizes the Accelerated Christian Education system that was started in the early 1970s
-                    by
-                    dedicated parents who desired their children reared under the teaching of God's word - the Bible.
-                    A.C.E.
-                    penetrated over 130 countries, where parents desire their children's lives patterned after the
-                    timeless
-                    principles of God's Word. <br><br>
-
-                    Department of Education-Region IV-A has given full recognition to BVBC: Junior High School (years
-                    7-10)
-                    since 2023, Elementary (Grades 1 through 6) since 2017, and Pre-Elementary (Kindergarten ) since
-                    2016,
-                    as well as a permit to operate the Senior High School (Academic Track) since 2018.<br><br>
-
-                    On the other hand, the College Department offers a Bachelor in Theology and a Bachelor of Science in
-                    Christian Education. The commitment of dedicated staff and diligent students in these departments
-                    has
-                    bridged the Licensure Examination for Teachers with 100% marks for three consecutive undertakings.
-                </p>
-            </div>
+      <div class="aboutus">
+        <div class="aboutus-container">
+          <button class="learn-more">
+            <span class="button-text">Learn More</span>
+            <span class="arrow-icon"></span>
+          </button>
         </div>
 
-        <div class="messagePres">
-            <div class="col_img">
-                <img src="/assets/img/placeholder1.jpg" alt="">
-            </div>
-            <div class="col_message">
-                <h1>Message from the President</h1>
-                <p id="text" class="message-content">
-                    <b>Dear Friends and Visitors,</b> <br><br>
-                    Greetings in the matchless name of our Lord and Savior Jesus Christ. <br><br>
+        <div class="aboutus-dropdown">
+          <p>
+            Baptist Voice Bible College, also known as BVBC, is a private school
+            that offers foundational and higher education. It has been operated
+            and managed by Grace Baptist Church since 2000. The Basic Education
+            Department utilizes the Accelerated Christian Education system that
+            was started in the early 1970s by dedicated parents who desired
+            their children reared under the teaching of God's word - the Bible.
+            A.C.E. penetrated over 130 countries, where parents desire their
+            children's lives patterned after the timeless principles of God's
+            Word. <br /><br />
 
-                    It is with sincere gratitude and heartfelt joy that I welcome you to the official website of
-                    <b>Baptist Voice Bible College</b>. We count it a great privilege to introduce you to the vision,
-                    values,
-                    and ministry of this institution, which exists solely for the glory of God and the advancement of
-                    the
-                    Gospel of Jesus Christ.<br><br>
+            Department of Education-Region IV-A has given full recognition to
+            BVBC: Junior High School (years 7-10) since 2023, Elementary (Grades
+            1 through 6) since 2017, and Pre-Elementary (Kindergarten ) since
+            2016, as well as a permit to operate the Senior High School
+            (Academic Track) since 2018.<br /><br />
 
-                    Founded upon the timeless truths of the Word of God and anchored in the historic Baptist faith, our
-                    college is committed to the training and preparation of dedicated men and women for faithful service
-                    in local churches, mission fields, and Christian ministries worldwide. As an Independent Baptist
-                    institution, we uphold the authority of Scripture, the autonomy of the local church, and the
-                    centrality of the Gospel in all that we do.<br><br>
-
-                    At BVBC, students are challenged academically, enriched spiritually, and equipped practically for
-                    the work of the ministry. Our programs are intentionally designed to develop biblically sound,
-                    spiritually mature, and ministry-ready servants of Christ. Through sound doctrinal instruction,
-                    fervent prayer, and real-world ministry experience, we aim to cultivate leaders who will remain
-                    steadfast in truth and faithful in service.<br><br>
-
-                    This website serves as a window into the life and labor of our college. Whether you are seeking a
-                    place to prepare for God's call upon your life, exploring opportunities to partner with us in prayer
-                    and support, or simply learning more about our mission, we are honored by your interest. I encourage
-                    you to explore the resources available here and to contact us should you desire further information
-                    or assistance.<br><br>
-
-                    On behalf of our faculty, staff, and student body, thank you for visiting. May the Lord richly bless
-                    you as you seek His will and serve His Kingdom.<br><br>
-
-                    For His Glory,<br>
-                    <b>Rudy Calayan</b><br>
-                    President<br>
-                    <b>Baptist Voice Bible College</b><br>
-                </p>
-                <span id="seeMore" class="see-more" onclick="expandText()">See more</span>
-            </div>
+            On the other hand, the College Department offers a Bachelor in
+            Theology and a Bachelor of Science in Christian Education. The
+            commitment of dedicated staff and diligent students in these
+            departments has bridged the Licensure Examination for Teachers with
+            100% marks for three consecutive undertakings.
+          </p>
         </div>
-        
-        <!-- 
+      </div>
+
+      <div class="messagePres">
+        <div class="col_img">
+          <img src="/assets/img/placeholder1.jpg" alt="" />
+        </div>
+        <div class="col_message">
+          <h1>Message from the President</h1>
+          <p id="text" class="message-content">
+            <b>Dear Friends and Visitors,</b> <br /><br />
+            Greetings in the matchless name of our Lord and Savior Jesus Christ.
+            <br /><br />
+
+            It is with sincere gratitude and heartfelt joy that I welcome you to
+            the official website of
+            <b>Baptist Voice Bible College</b>. We count it a great privilege to
+            introduce you to the vision, values, and ministry of this
+            institution, which exists solely for the glory of God and the
+            advancement of the Gospel of Jesus Christ.<br /><br />
+
+            Founded upon the timeless truths of the Word of God and anchored in
+            the historic Baptist faith, our college is committed to the training
+            and preparation of dedicated men and women for faithful service in
+            local churches, mission fields, and Christian ministries worldwide.
+            As an Independent Baptist institution, we uphold the authority of
+            Scripture, the autonomy of the local church, and the centrality of
+            the Gospel in all that we do.<br /><br />
+
+            At BVBC, students are challenged academically, enriched spiritually,
+            and equipped practically for the work of the ministry. Our programs
+            are intentionally designed to develop biblically sound, spiritually
+            mature, and ministry-ready servants of Christ. Through sound
+            doctrinal instruction, fervent prayer, and real-world ministry
+            experience, we aim to cultivate leaders who will remain steadfast in
+            truth and faithful in service.<br /><br />
+
+            This website serves as a window into the life and labor of our
+            college. Whether you are seeking a place to prepare for God's call
+            upon your life, exploring opportunities to partner with us in prayer
+            and support, or simply learning more about our mission, we are
+            honored by your interest. I encourage you to explore the resources
+            available here and to contact us should you desire further
+            information or assistance.<br /><br />
+
+            On behalf of our faculty, staff, and student body, thank you for
+            visiting. May the Lord richly bless you as you seek His will and
+            serve His Kingdom.<br /><br />
+
+            For His Glory,<br />
+            <b>Rudy Calayan</b><br />
+            President<br />
+            <b>Baptist Voice Bible College</b><br />
+          </p>
+          <span id="seeMore" class="see-more" onclick="expandText()"
+            >See more</span
+          >
+        </div>
+      </div>
+
+      <!-- 
         <h1 class="h1AboutUs">Baptist Voice Bible College</h1>
         <div class="container History">
             <h1>
@@ -212,33 +222,32 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then(response => response.text())
-                .then(data => document.getElementById(id).innerHTML = data);
-        }
-        loadHTML('navigation', '/assets/navigation.html');
-        loadHTML('footer', '/assets/footer.html');
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
 
     <script defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            const aboutUsSection = document.querySelector('.About_us');
+      document.addEventListener("DOMContentLoaded", () => {
+        const aboutUsSection = document.querySelector(".About_us");
 
-            if (aboutUsSection) {
-                const button = aboutUsSection.querySelector('.learn-more');
-                const dropdown = aboutUsSection.querySelector('.aboutus-dropdown');
-                const arrow = aboutUsSection.querySelector('.arrow-icon');
+        if (aboutUsSection) {
+          const button = aboutUsSection.querySelector(".learn-more");
+          const dropdown = aboutUsSection.querySelector(".aboutus-dropdown");
+          const arrow = aboutUsSection.querySelector(".arrow-icon");
 
-                if (button && dropdown && arrow) {
-                    button.addEventListener('click', () => {
-                        dropdown.classList.toggle('open');
-                        arrow.classList.toggle('arrow-up');
-                    });
-                }
-            }
-        });
+          if (button && dropdown && arrow) {
+            button.addEventListener("click", () => {
+              dropdown.classList.toggle("open");
+              arrow.classList.toggle("arrow-up");
+            });
+          }
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>

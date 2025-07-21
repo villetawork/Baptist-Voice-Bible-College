@@ -44,7 +44,6 @@
 //     showSlides2(slideIndex2); // Also start second slider
 // };
 
-
 // // --- SECOND SLIDER (Outer with Inner) ---
 // let slideIndex2 = 0;
 // let innerIndex = 0;
