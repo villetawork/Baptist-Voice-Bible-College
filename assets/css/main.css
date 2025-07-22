@@ -542,7 +542,10 @@ span#month-label {
 .calendar {
   text-align: center;
   margin: 30px;
-  
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 12rem;
 }
 
 #calendar {
@@ -613,15 +616,16 @@ span#month-label {
 }
 
 #event-details {
-  margin-top: 20px;
+  margin-top: 120px;
   font-size: 1.1em;
+  width: 30rem;
 }
 
 .event-card {
   border: 1px solid #ccc;
   padding: 10px;
   margin: 5px auto;
-  max-width: 400px;
+  max-width: inherit;
   text-align: left;
   border-radius: 4px;
 }
