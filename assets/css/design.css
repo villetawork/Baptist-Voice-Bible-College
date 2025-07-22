@@ -346,7 +346,7 @@ body {
 
 /*-------------------- Footer --------------------*/
 footer {
-  background-color: var(--bg-color);
+  background-color: rgba(var(--secondary-color));
   color: var(--text-color);
   padding: 3rem 1rem;
 }
