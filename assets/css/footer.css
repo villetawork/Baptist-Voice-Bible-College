@@ -1,3 +1,10 @@
+footer {
+  background-color: rgba(var(--secondary-color));
+  color: var(--text-color);
+  padding: 3rem 1rem;
+  overflow: hidden;
+}
+
 .footer-logo img {
   width: 120px;
   height: auto;
@@ -14,8 +21,7 @@
 
 .social-icon {
   font-size: 1.5rem;
-  background-color: var(--highlight-color);
-  color: white;
+  color: #1877F2;
   padding: 10px;
   border-radius: 50%;
   width: 40px;

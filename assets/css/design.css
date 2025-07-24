@@ -23,8 +23,7 @@
 
 .logo-container {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 45mm;
 }
 
 .logo-container img {
@@ -344,9 +343,3 @@ body {
   border-radius: 50%;
 }
 
-/*-------------------- Footer --------------------*/
-footer {
-  background-color: rgba(var(--secondary-color));
-  color: var(--text-color);
-  padding: 3rem 1rem;
-}

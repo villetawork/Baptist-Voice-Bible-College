@@ -1,116 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
+<script>
     fetch("/assets/head.html")
-      .then((response) => response.text())
-      .then((data) => (document.head.innerHTML = data));
-  </script>
+        .then((response) => response.text())
+        .then((data) => (document.head.innerHTML = data));
+</script>
 
-  <body>
+<body>
     <div id="navigation"></div>
     <!-- main -->
     <main>
-      <div class="intro">
-        <video muted loop autoplay class="video">
-          <source src="assets/video/intro/Intro1.mp4" type="video/mp4" />
-        </video>
-        <!-- <div class="overlay"></div>
+        <div class="intro">
+            <video muted loop autoplay class="video">
+                <!-- <source src="\C:\Users\Admin\Downloads\Intro1.mp4" type="video/mp4" /> -->
+                <source src="assets/video/intro/Intro1.mp4" type="video/mp4" />
+            </video>
+            <!-- <div class="overlay"></div>
             <div class="overlay2"></div> -->
-        <div class="introtxt">
-          <div class="welcome">
-            <h3>Welcome to</h3>
-            <h1>BVBC</h1>
-          </div>
-          <p>
-            Baptist Voice Bible College, is a private school that offers
-            foundational and higher education. It has been operated and managed
-            by Grace Baptist Church since 2000.
-          </p>
-          <div class="button1">
-            <a href="/About-us.html">Contact us</a>
-          </div>
-        </div>
-        <div class="custom-shape-divider-bottom-1750301863">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-      </div>
-      <div class="carousel">
-        <ul class="list">
-          <li class="hide">
-            <img src="/assets/img/Home/carousel/1.png" />
-          </li>
-          <li class="prev">
-            <img src="/assets/img/Home/carousel/2.png" />
-          </li>
-          <li class="act">
-            <img src="/assets/img/Home/carousel/4.png" />
-          </li>
-          <li class="next">
-            <img src="/assets/img/Home/carousel/6.png" />
-          </li>
-          <li class="next new-next">
-            <!-- <img src="/add/img/here"> -->
-          </li>
-          <!-- "go to function.js to add new img" -->
-        </ul>
-
-        <div class="swipe"></div>
-      </div>
-
-      <div class="explore">
-        <div class="collumn_explore">
-          <div class="header_explore">
-            <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
-            <p>
-              BVBC offers a diverse range of academic programs designed to equip
-              students with the knowledge, skills, and values needed to succeed
-              in today's competitive world.
-            </p>
-          </div>
-
-          <div class="row_explore">
-            <!-- Program Container 1 -->
-            <div class="container">
-              <div class="imgcontainer">
-                <img
-                  src="/assets/img/Home/unsorted/bbvbcws.JPG"
-                  alt="Undergraduate Programs"
-                />
-              </div>
-              <h1>UNDERGRADUATE PROGRAMS</h1>
-              <p>
-                Discover a multitude of bachelor's degree programs that offer
-                limitless potential for launching your career.
-              </p>
+            <div class="introtxt">
+                <div class="welcome">
+                    <h3>Welcome to</h3>
+                    <h1>BVBC</h1>
+                </div>
+                <p>
+                    Baptist Voice Bible College, is a private school that offers
+                    foundational and higher education. It has been operated and managed
+                    by Grace Baptist Church since 2000.
+                </p>
+                <div class="button1">
+                    <a href="/About-us.html">Contact us</a>
+                </div>
             </div>
-
-            <!-- Program Container 2 -->
-            <div class="container">
-              <div class="imgcontainer">
-                <img
-                  src="/assets/img/Home/unsorted/PPHSICLL.jpg"
-                  alt="RR-Junior High School"
-                />
-              </div>
-              <h1>RR-JUNIOR HIGH SCHOOL</h1>
-              <p>
-                Begin your child's educational journey with our exceptional
-                preschool and basic education curriculum.
-              </p>
+            <div class="custom-shape-divider-bottom-1753270822">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill"></path>
+                </svg>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="carousel1">
+            <ul class="list">
+                <li class="hide">
+                    <img src="/assets/img/Home/carousel/1.png" />
+                </li>
+                <li class="prev">
+                    <img src="/assets/img/Home/carousel/2.png" />
+                </li>
+                <li class="act">
+                    <img src="/assets/img/Home/carousel/4.png" />
+                </li>
+                <li class="next">
+                    <img src="/assets/img/Home/carousel/6.png" />
+                </li>
+                <li class="next new-next">
+                    <!-- <img src="/add/img/here"> -->
+                </li>
+                <!-- "go to function.js to add new img" -->
+            </ul>
+
+            <div class="swipe"></div>
+        </div>
+
+        <div class="explore">
+            <div class="collumn_explore">
+                <div class="header_explore">
+                    <h1>EXPLORE OUR ACADEMIC PROGRAMS</h1>
+                    <p>
+                        BVBC offers a diverse range of academic programs designed to equip
+                        students with the knowledge, skills, and values needed to succeed
+                        in today's competitive world.
+                    </p>
+                </div>
+
+                <div class="row_explore">
+                    <!-- Program Container 1 -->
+                    <div class="container">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/bbvbcws.JPG" alt="Undergraduate Programs" />
+                        </div>
+                        <h1>UNDERGRADUATE PROGRAMS</h1>
+                        <p>
+                            Discover a multitude of bachelor's degree programs that offer
+                            limitless potential for launching your career.
+                        </p>
+                    </div>
+
+                    <!-- Program Container 2 -->
+                    <div class="container">
+                        <div class="imgcontainer">
+                            <img src="/assets/img/Home/unsorted/PPHSICLL.jpg" alt="RR-Junior High School" />
+                        </div>
+                        <h1>RR-JUNIOR HIGH SCHOOL</h1>
+                        <p>
+                            Begin your child's educational journey with our exceptional
+                            preschool and basic education curriculum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- footer -->
     <div id="footer"></div>
@@ -119,13 +109,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-      function loadHTML(id, file) {
-        fetch(file)
-          .then((response) => response.text())
-          .then((data) => (document.getElementById(id).innerHTML = data));
-      }
-      loadHTML("navigation", "/assets/navigation.html");
-      loadHTML("footer", "/assets/footer.html");
+        function loadHTML(id, file) {
+            fetch(file)
+                .then((response) => response.text())
+                .then((data) => (document.getElementById(id).innerHTML = data));
+        }
+        loadHTML("navigation", "/assets/navigation.html");
+        loadHTML("footer", "/assets/footer.html");
     </script>
-  </body>
+</body>
+
 </html>

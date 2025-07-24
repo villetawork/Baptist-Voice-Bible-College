@@ -95,3 +95,26 @@ function expandText() {
   document.getElementById("text").classList.add("expanded");
   document.getElementById("seeMore").style.display = "none";
 }
+
+
+// gallery
+function showSection(section, e) {
+  document.querySelectorAll('.fade-section').forEach(el => el.classList.remove('active'));
+  document.getElementById(section).classList.add('active');
+  document.querySelectorAll('.d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
+  e.target.classList.add('active');
+
+  if (section === 'faculty') {
+    document.querySelectorAll('#faculty .fade-section').forEach(el => el.classList.remove('active'));
+    document.getElementById('basicEd').classList.add('active');
+    document.querySelectorAll('#faculty .d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
+    document.querySelector('#faculty .d-flex > .btn-modern').classList.add('active');
+  }
+}
+
+function showSubSection(sub, e) {
+  document.querySelectorAll('#faculty .fade-section').forEach(el => el.classList.remove('active'));
+  document.getElementById(sub).classList.add('active');
+  document.querySelectorAll('#faculty .d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
+  e.target.classList.add('active');
+}
