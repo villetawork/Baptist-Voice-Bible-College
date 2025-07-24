@@ -92,8 +92,16 @@ setupCarousel();
 
 //------------------- about us ---------------------//
 function expandText() {
-  document.getElementById("text").classList.add("expanded");
-  document.getElementById("seeMore").style.display = "none";
+  var text = document.getElementById("text");
+  text.classList.toggle("expanded");
+  var seeMore = document.getElementById("seeMore");
+  if (text.classList.contains("expanded")) {
+    seeMore.innerText = "See less";
+    text.style.marginBottom = "1rem";
+  } else {
+    seeMore.innerText = "See more";
+    text.style.marginBottom = "0";
+  }
 }
 
 
