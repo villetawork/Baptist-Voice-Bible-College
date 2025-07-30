@@ -1,91 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    fetch("/assets/head.html")
-      .then((response) => response.text())
-      .then((data) => (document.head.innerHTML = data));
-  </script>
+<script>
+  fetch("/assets/head.html")
+    .then((response) => response.text())
+    .then((data) => (document.head.innerHTML = data));
+</script>
 
-  <body>
-    <div id="navigation"></div>
+<body>
+  <div id="navigation"></div>
 
-    <!-- main -->
-    <main class="Admission">
-      <div class="bgoverview">
-        <div class="bgimgAd1"></div>
-        <div class="txtholder">
-          <h1>Admission & Requirements</h1>
-          <p>
-            We are excited to welcome new learners to our growing BVBC
-            family!<br />
-            Below are the details you need to get started on your enrollment
-            journey with us.
-          </p>
-        </div>
+  <!-- main -->
+  <main class="Admission">
+    <div class="custom-header bgimgAd1 w-100">
+      <div class="container text-start">
+        <h1 class="fw-bold mb-2">Admission & Requirement</h1>
+        <p class="mb-0">
+          we are excited to welcome new learners to our growing BVBC
+          family!<br />
+          Below are the details you need to gget started on your enrollment
+          journey with us.
+        </p>
       </div>
-      <div class="admissionBody">
-        <div class="enrollment_process">
-          <h2>Enrollment Process</h2>
+    </div>
+
+    <div class="container dropdowntabs mt-5">
+      <div class="center-container">
+
+        <!-- Section 1 Header -->
+        <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+          aria-controls="collapseOne">
+          <h2>Basic Education</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="collapse collapse-content" id="collapseOne">
+          <p>
+            <strong>Qualification</strong><br><br>
+            <strong>For Christian School: (Basic Education)</strong><br>
           <ol>
             <li>
-              <p>
-                <b>Inquire</b> - Visit our campus or contact our office to
-                begin the admission process.
-              </p>
+              Students who are financially incapable to sustain financial obligation of the school. An ITR will be
+              required to substantiate such claim. </li>
+            <li>
+              Student who are academically competent with a general average of 85% above.
             </li>
             <li>
-              <p>
-                <b>Submit Requirements</b> - Provide the required documents for
-                evaluation.
-              </p>
+              Students who have good moral conduct and are willing to be deepen their faith to Jesus Christ.
             </li>
             <li>
-              <p>
-                <b>Student Assessment</b> - Applicants may be asked to complete
-                an academic readiness test or attend an interview.
-              </p>
+              Students who are able to pass the diagnostic test with remarkable score according to their grade level.
             </li>
             <li>
-              <p>
-                <b>Confirmation & Payment</b> - Once accepted, complete payment
-                and attent the orientation session.
-              </p>
+              Students who are able to pass the interview facilitated by the school Board of Trustees.
+            </li>
+          </ol><br><br>
+          <strong>Application Process</strong><br><br>
+          <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
+          <ol>
+            <li>
+              Interested applicants must inquire to the principal's office for preliminary interview.
+            </li>
+            <li>
+              Fill-out scholarship application form with document attached such as birth certificate, school card, ITR,
+              application letter and Brgy.
+              <br>Clearance.
+            </li>
+            <li>
+              Applicant along with their parent are scheduled for interview by the Board of Trustees.
+            </li>
+            <li>
+              For those senior students (2nd and up) who excel academically will have the special privilege to be a
+              scholarship recipient but still need to
+              <br>provide necessary documents such as ITR, application letter, birth certificate and Brgy. clearance.
+              Students who are qualified to the project
+              <br>are also subject for moral and spiritual review of the school administrator. Students under these
+              criteria can also avail to cover their pending
+              <br>school fees on their latter curriculum year.
             </li>
           </ol>
+          </p>
         </div>
-        <hr />
-        <div class="age_eligibility">
-          <h2>Age Eligibility</h2>
-          <ul>
-            <li>
-              <p>
-                <b>Kindergarten</b> - Must be <b>5 years old</b> by
-                <b>October 31</b>of the current school year.
-              </p>
-            </li>
-            <li>
-              <p>
-                <b>Elementary</b> - Must be <b>6 years old</b> by
-                <b>October 31</b>of the current school year.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </main>
 
-    <!-- footer -->
-    <div id="footer"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/assets/js/functions.js"></script>
-    <script>
-      function loadHTML(id, file) {
-        fetch(file)
-          .then((response) => response.text())
-          .then((data) => (document.getElementById(id).innerHTML = data));
-      }
-      loadHTML("navigation", "/assets/navigation.html");
-      loadHTML("footer", "/assets/footer.html");
-    </script>
-  </body>
+        <!-- Section 2 Header -->
+        <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+          aria-controls="collapseTwo">
+          <h2>College Department</h2>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="collapse collapse-content" id="collapseTwo">
+          <p>
+            <strong>Qualification</strong><br><br>
+            <strong>For Bible School: (College)</strong><br>
+          <ol>
+            <li>
+              Student who are financially incapable to sustain financial obligation of the school. Ab ITR will be
+              required to substantiate such claim.
+            </li>
+            <li>
+              Student who are academically competent with a general average of 85% above.
+            </li>
+            <li>
+              Student who have good moral cunduct and are willing to be trained according to the rules and regulation of
+              the bible school standard.
+            </li>
+            <li>
+              Student who are faithful in attending the services and ministry of Grace Baptist Church.
+            </li>
+            <li>
+              Student who are able to pass the interview facilitated by the school Board of Trustees.
+            </li>
+          </ol><br><br>
+          <strong>Application Process</strong><br><br>
+          <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
+          <ol>
+            <li>
+              Interested applicants must inquire to the registrar's office for preliminary interview.
+            </li>
+            <li>
+              Fill-out scholarship application form with document attach such as birth certificate, school card, ITR,
+              application letter and Brgy. Clearance.
+            </li>
+            <li>
+              Applicants are scheduled properly for diagnostic examination.
+            </li>
+            <li>
+              After passing the diagnostic examination, applicant along with their parent are subject for interview by
+              the Board of Trustees.
+            </li>
+          </ol>
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container py-5">
+      <h2 class="fw-bold mb-4"></h2>
+      <ol class="ps-3">
+        <li class="mb-3">
+          <p>
+            <strong>Inquire</strong> - Visit our campus or contact our office to
+            begin the admission process.
+          </p>
+        </li>
+        <li class="mb-3">
+          <p>
+            <strong>Submit Requirements</strong> - Provide the required documents for
+            evaluation.
+          </p>
+        </li>
+        <li class="mb-3">
+          <p>
+            <strong>Student Assessment</strong> - Applicants may be asked to complete
+            an academic readiness test or attend an interview.
+          </p>
+        </li>
+        <li class="mb-3">
+          <p>
+            <strong>Confirmation & Payment</strong>> - Once accepted, complete payment
+            and attent the orientation session.
+          </p>
+        </li>
+      </ol>
+
+      <hr class="my-5">
+
+      <h2 class="fw-bold mb-4"></h2>
+      <ol class="ps-3">
+        <li class="mb-3">
+          <p>
+            <strong>Kindergarten</strong> Must be
+            <strong>5 y/o</strong> by <strong>October 31</strong> of the
+            current school year.
+          </p>
+        </li>
+        <li class="mb-3">
+          <p>
+            <strong>Elementary</strong> Must be
+            <strong>6 y/o</strong> by <strong>October 31</strong> of the
+            current school year.
+          </p>
+        </li>
+      </ol>
+    </div>
+
+  </main>
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/assets/js/functions.js"></script>
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then((response) => response.text())
+        .then((data) => (document.getElementById(id).innerHTML = data));
+    }
+    loadHTML("navigation", "/assets/navigation.html");
+    loadHTML("footer", "/assets/footer.html");
+  </script>
+</body>
+
 </html>
