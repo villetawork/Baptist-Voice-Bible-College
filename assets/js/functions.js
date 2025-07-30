@@ -90,6 +90,23 @@ setInterval(next, 4000);
 // Initialize
 setupCarousel();
 
+//------------------- Admission ---------------------//
+document.querySelectorAll('.section-header').forEach(header => {
+  const arrow = header.querySelector('.arrow');
+  const targetId = header.getAttribute('data-bs-target');
+  const collapseEl = document.querySelector(targetId);
+
+  // When content is shown, rotate arrow up
+  collapseEl.addEventListener('shown.bs.collapse', () => {
+    arrow.classList.add('rotate');
+  });
+
+  // When content is hidden, rotate arrow down
+  collapseEl.addEventListener('hidden.bs.collapse', () => {
+    arrow.classList.remove('rotate');
+  });
+});
+
 //------------------- about us ---------------------//
 function expandText() {
   var text = document.getElementById("text");
