@@ -91,19 +91,17 @@ setInterval(next, 4000);
 setupCarousel();
 
 //------------------- Admission ---------------------//
-document.querySelectorAll('.section-header').forEach(header => {
-  const arrow = header.querySelector('.arrow');
-  const targetId = header.getAttribute('data-bs-target');
+document.querySelectorAll(".section-header").forEach((header) => {
+  const arrow = header.querySelector(".arrow");
+  const targetId = header.getAttribute("data-bs-target");
   const collapseEl = document.querySelector(targetId);
 
-  // When content is shown, rotate arrow up
-  collapseEl.addEventListener('shown.bs.collapse', () => {
-    arrow.classList.add('rotate');
+  collapseEl.addEventListener('show.bs.collapse', () => {
+    arrow.classList.add('arrow-rotated');
   });
 
-  // When content is hidden, rotate arrow down
-  collapseEl.addEventListener('hidden.bs.collapse', () => {
-    arrow.classList.remove('rotate');
+  collapseEl.addEventListener('hide.bs.collapse', () => {
+    arrow.classList.remove('arrow-rotated');
   });
 });
 
@@ -121,25 +119,38 @@ function expandText() {
   }
 }
 
-
 // gallery
 function showSection(section, e) {
-  document.querySelectorAll('.fade-section').forEach(el => el.classList.remove('active'));
-  document.getElementById(section).classList.add('active');
-  document.querySelectorAll('.d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
-  e.target.classList.add('active');
+  document
+    .querySelectorAll(".fade-section")
+    .forEach((el) => el.classList.remove("active"));
+  document.getElementById(section).classList.add("active");
+  document
+    .querySelectorAll(".d-flex > .btn-modern")
+    .forEach((btn) => btn.classList.remove("active"));
+  e.target.classList.add("active");
 
-  if (section === 'faculty') {
-    document.querySelectorAll('#faculty .fade-section').forEach(el => el.classList.remove('active'));
-    document.getElementById('basicEd').classList.add('active');
-    document.querySelectorAll('#faculty .d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
-    document.querySelector('#faculty .d-flex > .btn-modern').classList.add('active');
+  if (section === "faculty") {
+    document
+      .querySelectorAll("#faculty .fade-section")
+      .forEach((el) => el.classList.remove("active"));
+    document.getElementById("basicEd").classList.add("active");
+    document
+      .querySelectorAll("#faculty .d-flex > .btn-modern")
+      .forEach((btn) => btn.classList.remove("active"));
+    document
+      .querySelector("#faculty .d-flex > .btn-modern")
+      .classList.add("active");
   }
 }
 
 function showSubSection(sub, e) {
-  document.querySelectorAll('#faculty .fade-section').forEach(el => el.classList.remove('active'));
-  document.getElementById(sub).classList.add('active');
-  document.querySelectorAll('#faculty .d-flex > .btn-modern').forEach(btn => btn.classList.remove('active'));
-  e.target.classList.add('active');
+  document
+    .querySelectorAll("#faculty .fade-section")
+    .forEach((el) => el.classList.remove("active"));
+  document.getElementById(sub).classList.add("active");
+  document
+    .querySelectorAll("#faculty .d-flex > .btn-modern")
+    .forEach((btn) => btn.classList.remove("active"));
+  e.target.classList.add("active");
 }
