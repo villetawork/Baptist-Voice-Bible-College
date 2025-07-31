@@ -78,7 +78,7 @@ header {
   min-width: 160px;
   position: absolute;
   z-index: 1;
-  margin-top: 13px;
+  margin-top: 10px;
   transition: 3s ease-in-out;
 }
 
@@ -97,4 +97,3 @@ header {
   display: block;
   z-index: 9999;
 }
-

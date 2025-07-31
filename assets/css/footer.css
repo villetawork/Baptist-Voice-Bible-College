@@ -19,22 +19,9 @@ footer {
   font-weight: bold;
 }
 
-.social-icon {
-  font-size: 1.5rem;
-  color: #1877F2;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-}
-
-.social-icon:hover {
-  opacity: 0.8;
-  text-decoration: none;
+a svg.bi-facebook:hover {
+  fill: #1877f2;
+  transition: fill 0.3s ease;
 }
 
 .material-icons {
