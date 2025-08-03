@@ -5,43 +5,58 @@ footer {
   overflow: hidden;
 }
 
-.footer-logo img {
-  width: 120px;
-  height: auto;
+.footer a {
+  color: #000;
+  text-decoration: none;
 }
 
-.footer-logo h1 {
-  font-size: 2rem;
-  color: var(--primary-color);
+.footer a:hover {
+  color: rgba(var(--primary-color));
 }
 
-.footer-section h5 {
-  font-weight: bold;
+.footer .logo {
+  max-width: 150px;
+  max-height: 150px;
 }
 
-a svg.bi-facebook:hover {
-  fill: #1877f2;
-  transition: fill 0.3s ease;
+.map {
+  max-width: 100%;
+  height: 430px;
+  border: 0;
 }
 
-.material-icons {
-  vertical-align: middle;
-  font-size: 18px;
-  margin-right: 5px;
+.social-icons i.fa-facebook {
+  font-size: 45px;
+  /* Increased icon size */
+  margin-right: 15px;
+  margin-left: 10px;
+  color: #1877F2;
 }
 
-ul {
-  padding-left: 0;
-  list-style: none;
+.social-icons i.fa-youtube {
+  font-size: 45px;
+  /* Increased icon size */
+  margin-right: 15px;
+  color: #FF0000;
 }
 
-ul li {
-  margin-bottom: 0.5rem;
+.footer .logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
 }
 
-@media (max-width: 576px) {
-  .footer-logo,
-  .footer-section {
-    text-align: center;
-  }
+.footer p {
+  text-align: left;
+}
+
+.copyright {
+  text-align: center;
+  color: #2a4670;
+  font-size: 14px;
+  padding-top: 20px;
 }

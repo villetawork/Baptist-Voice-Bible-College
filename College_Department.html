@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+  fetch("/assets/head.html")
+    .then((response) => response.text())
+    .then((data) => (document.head.innerHTML = data));
+</script>
+
+<body>
+  <div id="navigation"></div>
+
+  <!-- main -->
+  <main class="CollegeMain">
+    <div class="bgoverview">
+      <div class="bgimgC1">
+        <div class="overlay1"></div>
+      </div>
+      <h1>College Overview</h1>
+    </div>
+
+    <div class="programs-section py-5">
+      <div class="background-fixed"></div>
+
+      <div class="container">
+        <div class="text-center mb-4">
+          <h3>BVBC College Programs</h3>
+          <p>
+            BVBC students are taught by qualified professors guided by biblical principles and directed by a CHED
+            recognized Curriculum. Our graduates are ready and competent for Licensure Examination for Professional
+            Teachers (LEPT). Our institution hones every student the Christ-like values to better serve their purpose
+            according to God's will in their lives.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="program-container">
+              <div class="program-content">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/330px-Placeholder_view_vector.svg.png"
+                  alt="Program 1">
+                <h3 class="text-center">Bachelor in Theology</h3>
+                <p class="text-center">
+                  A degree focused on biblical studies, doctrine, church history, and ministry training. It prepares
+                  students for roles such as pastors, missionaries, and church leaders by deepening their knowledge of
+                  God's Word and practical ministry skills.
+                </p>
+              </div>
+              <a href="/path/to/program1.pdf" class="btn btn-custom mt-2 align-self-end">View Curriculum</a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="program-container">
+              <div class="program-content">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Placeholder_view_vector.svg/330px-Placeholder_view_vector.svg.png"
+                  alt="Program 2">
+                <h3 class="text-center">Bachelor of Science in Christian</h3>
+                <p class="text-center">
+                  A degree that equips future Christian educators to teach in schools or churches. It combines academic
+                  education principles with biblical values, preparing graduates to teach both general and faith-based
+                  subjects, often in preparation for the Licensure Examination for Teachers (LET).
+                </p>
+              </div>
+              <a href="/path/to/program2.pdf" class="btn btn-custom mt-2 align-self-end">View Curriculum</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <div id="footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/assets/js/functions.js"></script>
   <script>
-    fetch("/assets/head.html")
-      .then((response) => response.text())
-      .then((data) => (document.head.innerHTML = data));
+    function loadHTML(id, file) {
+      fetch(file)
+        .then((response) => response.text())
+        .then((data) => (document.getElementById(id).innerHTML = data));
+    }
+    loadHTML("navigation", "/assets/navigation.html");
+    loadHTML("footer", "/assets/footer.html");
   </script>
+</body>
 
-  <body>
-    <div id="navigation"></div>
-
-    <!-- main -->
-    <main class="CollegeMain">
-      <div class="bgoverview">
-        <div class="bgimgC1">
-          <div class="overlay1"></div>
-        </div>
-        <h1>College Overview</h1>
-      </div>
-
-      <div class="CollegeBody">
-        <div class="col_college">
-          <h1>Programs</h1>
-          <p></p>
-        </div>
-        <div class="row-college">
-          <div class="course BTH">
-            <div class="imgcontainer">
-              <img
-                src="/assets/img/placeholder1.jpg"
-                alt="Bachelor in Theology Image"
-              />
-            </div>
-            <h1>Bachelor in Theology (BTh)</h1>
-          </div>
-          <div class="course BSCeD">
-            <div class="imgcontainer">
-              <img
-                src="/assets/img/placeholder2.webp"
-                alt="Bachelor of Science in Christian Education Image"
-              />
-            </div>
-            <h1>Bachelor of Science in Christian Education (BSCeD)</h1>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- footer -->
-    <div id="footer"></div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/assets/js/functions.js"></script>
-    <script>
-      function loadHTML(id, file) {
-        fetch(file)
-          .then((response) => response.text())
-          .then((data) => (document.getElementById(id).innerHTML = data));
-      }
-      loadHTML("navigation", "/assets/navigation.html");
-      loadHTML("footer", "/assets/footer.html");
-    </script>
-  </body>
 </html>
