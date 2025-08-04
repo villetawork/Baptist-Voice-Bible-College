@@ -1,1 +1,81 @@
+.calendar-day {
+    height: 100px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    position: relative;
+}
 
+.calendar-day.has-event {
+    background-color: #ffe6e6;
+    border: 2px solid #800000;
+}
+
+.event-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 0.75rem;
+}
+
+.calendar-header,
+.event-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-type-BasicED {
+    color: #007bff;
+}
+
+.event-type-College {
+    color: #28a745;
+}
+
+.event-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.event-list-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.event-month-small {
+    font-size: 0.9rem;
+    margin-right: 0.25rem;
+}
+
+.date-pair {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.event-date .month {
+    font-size: 0.8rem;
+    display: block;
+    color: #555;
+    line-height: 1;
+}
+
+.event-date .day {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}

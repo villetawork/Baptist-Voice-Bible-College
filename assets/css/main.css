@@ -518,7 +518,7 @@ main {
 }
 
 /* ------------------- Calendar ------------------- */
-.nav {
+/* .nav {
   margin-bottom: 10px;
   display: flex;
   justify-content: center;
@@ -627,7 +627,7 @@ span#month-label {
 .event-card p {
   margin: 0;
   color: #555;
-}
+} */
 
 /* ------------------- Contact Us ------------------- */
 
