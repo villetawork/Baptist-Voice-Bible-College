@@ -1,17 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-    fetch("/assets/head.html")
-      .then((response) => response.text())
-      .then((data) => (document.head.innerHTML = data));
-  </script>
+<script>
+  fetch("/assets/head.html")
+    .then((response) => response.text())
+    .then((data) => (document.head.innerHTML = data));
+</script>
 
-  <body>
-    <div id="navigation"></div>
+<body>
+  <div id="navigation"></div>
 
-    <!-- main -->
-    <main class="calendar">
-      <div class="calendarRight">
+  <!-- main -->
+  <main class="calendar">
+
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-12 col-md-7 order-md-2">
+          <div class="bg-light p3 rounded shadow-sm">
+            <div class="mb-3 calendar-header">
+              <button class="btn btn-outline-secondary" onclick="changeMonth(-1)">&#8592;</button>
+              <h4 id="monthYear" class="mb-0"></h4>
+              <button class="btn btn-outline-secondary" onclick="changeMonth(1)">&#8594;</button>
+            </div>
+            <div id="calendarContainer"></div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 order-md-1">
+          <div class="mb-3 event-header">
+            <h5 class="mb-0">Event List</h5>
+            <select id="filterSelect" class="form-select w-auto" onchange="renderCalendar()">
+              <option value="All">All Events</option>
+              <option value="BasicED">BasicED</option>
+              <option value="College">College</option>
+            </select>
+          </div>
+          <ul class="list-group" id="eventList"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const calendarContainer = document.getElementById('calendarContainer');
+      const eventList = document.getElementById('eventList');
+      const monthYear = document.getElementById('monthYear');
+      const filterSelect = document.getElementById('filterSelect');
+
+      const events = [
+        { title: 'Opening Ceremony', type: ['BasicED', 'College'], startDate: '2025-08-18', endDate: '2025-08-18' },
+        { title: 'BasicED Orientation', type: ['BasicED'], startDate: '2025-08-10', endDate: '2025-08-12' },
+        { title: 'College Enrollment', type: ['College'], startDate: '2025-08-15', endDate: '2025-08-15' },
+        { title: 'BasicED Math Quiz', type: ['BasicED'], startDate: '2025-08-22', endDate: '2025-08-25' },
+        { title: 'College Field Trip', type: ['College'], startDate: '2025-09-05', endDate: '2025-09-07' },
+      ];
+
+
+      let currentDate = new Date();
+
+      function renderCalendar() {
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        monthYear.textContent = currentDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+        calendarContainer.innerHTML = '';
+
+        const calendar = document.createElement('div');
+        calendar.className = 'row g-1';
+
+        const filteredEvents = events.filter(event => {
+          const eventStart = new Date(event.startDate);
+          const eventEnd = new Date(event.endDate);
+          return (eventStart.getFullYear() === year && eventStart.getMonth() === month) ||
+            (eventEnd.getFullYear() === year && eventEnd.getMonth() === month) ||
+            (eventStart < new Date(year, month + 1, 1) && eventEnd >= new Date(year, month, 1));
+        }).filter(event => filterSelect.value === 'All' || event.type.includes(filterSelect.value));
+
+
+        for (let i = 0; i < firstDay; i++) {
+          calendar.innerHTML += `<div class="col-1 calendar-day"></div>`;
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+          const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+          const hasEvent = filteredEvents.some(e => dateStr >= e.startDate && dateStr <= e.endDate);
+          calendar.innerHTML += `
+          <div class="col-1 calendar-day ${hasEvent ? 'has-event' : ''}">
+            ${day}
+          </div>`;
+        }
+
+        calendarContainer.appendChild(calendar);
+        renderEventList(filteredEvents);
+      }
+
+      function renderEventList(filteredEvents) {
+        eventList.innerHTML = '';
+        if (filteredEvents.length === 0) {
+          eventList.innerHTML = '<li class="list-group-item">No events this month.</li>';
+        } else {
+          filteredEvents.forEach(event => {
+            const start = new Date(event.startDate);
+            const end = new Date(event.endDate);
+            const format = { month: 'short', day: 'numeric' };
+            const dateDisplay = `
+              <div class="date-pair">
+                <span class="month">${start.toLocaleString('default', { month: 'short' })}</span>
+                <span class="day">${start.getDate()}</span>
+              </div>` +
+              (event.startDate !== event.endDate ?
+                `<div class="date-pair">
+                  <span class="month">${end.toLocaleString('default', { month: 'short' })}</span>
+                  <span class="day">${end.getDate()}</span>
+                </div>` : '');
+
+
+
+            eventList.innerHTML += `
+            <li class="list-group-item event-list-item">
+              <div class="event-list-top">
+                <strong>${event.title}</strong>
+                <span class="event-date">${dateDisplay}</span>
+              </div>
+              <div>
+  ${event.type.map(t => `<span class="event-type-${t}">${t}</span>`).join(' ')}
+</div>
+
+            </li>`;
+          });
+        }
+      }
+
+      function changeMonth(offset) {
+        currentDate.setMonth(currentDate.getMonth() + offset);
+        renderCalendar();
+      }
+
+      renderCalendar();
+    </script>
+  </main>
+
+
+
+    <!-- <div class="calendarRight">
       <h1>Event Calendar</h1>
 
       <div class="filter">
@@ -232,7 +363,7 @@
       });
 
       renderCalendar(currentMonth, currentYear);
-    </script>
+    </script> -->
 
     <!-- footer -->
     <div id="footer"></div>
@@ -247,5 +378,6 @@
       loadHTML("navigation", "/assets/navigation.html");
       loadHTML("footer", "/assets/footer.html");
     </script>
-  </body>
+</body>
+
 </html>
