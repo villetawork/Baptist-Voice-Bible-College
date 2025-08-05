@@ -3,18 +3,16 @@
     border: 1px solid #ddd;
     padding: 5px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: bold;
+    width: calc(100% / 7);
 }
 
 .calendar-day.has-event {
     background-color: #ffe6e6;
     border: 2px solid #800000;
-}
-
-.event-badge {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    font-size: 0.75rem;
 }
 
 .calendar-header,
@@ -48,34 +46,33 @@
 }
 
 .event-date {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.event-month-small {
-    font-size: 0.9rem;
-    margin-right: 0.25rem;
-}
-
-.date-pair {
-    display: flex;
-    align-items: baseline;
-    gap: 4px;
-}
-
-.event-date .month {
-    font-size: 0.8rem;
-    display: block;
-    color: #555;
-    line-height: 1;
-}
-
-.event-date .day {
     font-size: 1.5rem;
     font-weight: bold;
-    display: block;
-    line-height: 1;
+}
+
+.event-month {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+#calendarSection {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.day-label {
+    height: 30px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+#eventList.list-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 515px;
+    overflow-y: auto;
 }
