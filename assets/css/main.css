@@ -630,6 +630,17 @@ span#month-label {
 } */
 
 /* ------------------- Contact Us ------------------- */
+/* 
+// add Events here (YYYY-MM-DD)
+      const events = [
+        { title: 'PTC', type: ['BasicED'], startDate: '2025-08-8', endDate: '2025-08-8' },
+        { title: '1st Quarter Exam', type: ['BasicED'], startDate: '2025-08-11', endDate: '2025-08-12' },
+        { title: 'Educators Convention', type: ['BasicEd'], startDate: '2025-08-14', endDate: '2025-08-15' },
+        { title: 'Quarter Break <br> Acting Workshop', type: ['BasicED'], startDate: '2025-08-18', endDate: '2025-08-22' },
+        { title: '3rd Tri-Weekly <br> BVBC Night', type: ['BasicEd'], startDate: '2025-08-26', endDate: '2025-08-26' },
+        { title: 'Linggo ng Wika', type: ['BasicEd'], startDate: '2025-08-29', endDate: '2025-08-29' },
+        { title: 'Tri-Weekly', type: ['BasicEd'], startDate: '2025-09-05', endDate: '2025-09-07' },
+      ]; */
 
 main.Contact-us {
   display: flex;
