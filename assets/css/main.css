@@ -727,27 +727,39 @@ main.About_us .row_img_leadership {
 .aboutus .aboutus-container {
   width: 100%;
   height: 45vh;
-  background-image: url("/assets/img/placeholder2.webp");
+  background-image: url("/assets/img/Home/Background-imgs/BG1.png");
   background-size: cover;
-  background-position: center;
+  background-position: 0 400px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   position: relative;
   padding-bottom: 20px;
+  overflow: hidden;
+  /* Make sure overlay stays inside */
+}
+
+.aboutus .aboutus-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* dark overlay */
+  z-index: 0;
+  /* behind button */
 }
 
 .aboutus .aboutus-dropdown {
-  max-height: 0 !important;
-  overflow: hidden !important;
-  transition: max-height 0.4s ease !important;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
   background-color: #f0f0f0;
-  padding: 0 20px !important;
+  padding: 0 20px;
 }
 
 .aboutus .aboutus-dropdown.open {
-  max-height: 500px !important;
-  padding: 20px !important;
+  max-height: 500px;
+  padding: 20px;
 }
 
 .aboutus button.learn-more {
@@ -758,6 +770,9 @@ main.About_us .row_img_leadership {
   border: none;
   cursor: pointer;
   font-family: inherit;
+  z-index: 1;
+  /* on top of overlay */
+  position: relative;
 }
 
 .aboutus .button-text {
@@ -838,6 +853,13 @@ main.About_us .row_img_leadership {
   top: 2rem;
 }
 
+/* ------------- School description ------------- */
+.pSize {
+  width: 85%;
+}
+
+
+
 /* ------------------- Gallery ------------------- */
 
 .gallery-img {
@@ -903,4 +925,30 @@ main.About_us .row_img_leadership {
 
 #who-we-are {
   background: #eee;
+}
+
+/* ------------------- Gallery ------------------- */
+
+.swiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+}
+
+.gallery-title {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2rem;
+  font-weight: bold;
 }
