@@ -106,6 +106,12 @@ document.querySelectorAll(".section-header").forEach((header) => {
 });
 
 //------------------- about us ---------------------//
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('note').classList.add('show');
+  document.getElementById('showNoteBtn').remove();
+});
+
+
 function expandText() {
   var text = document.getElementById("text");
   text.classList.toggle("expanded");
@@ -154,3 +160,26 @@ function showSubSection(sub, e) {
     .forEach((btn) => btn.classList.remove("active"));
   e.target.classList.add("active");
 }
+
+
+//------------------- Facilities ---------------------//
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    576: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+  }
+});
