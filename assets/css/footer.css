@@ -40,7 +40,7 @@ footer {
   color: #FF0000;
 }
 
-.footer .logo-container {
+.footer .flogo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

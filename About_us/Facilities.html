@@ -1,64 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
+  <script>
     fetch("/assets/head.html")
-        .then((response) => response.text())
-        .then((data) => (document.head.innerHTML = data));
-</script>
+      .then((response) => response.text())
+      .then((data) => (document.head.innerHTML = data));
+  </script>
 
-<body>
-    <div id="navigation"></div>
+  <body>
+    <div id="loading-screen" class="loading-screen" style="display: none">
+      <div class="logo-container">
+        <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo" />
+      </div>
+    </div>
 
-    <!-- main -->
-    <main>
-        <div class="container">
-            <h2 class="gallery-title">Facilities</h2>
+    <!-- Main Content -->
+    <div id="main-content" style="display: none">
+      <div id="navigation"></div>
 
-            <!-- Swiper -->
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide">
-                        <img src="/assets/img/placeholder2.webp" alt="Image 1" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/img/placeholder2.webp" alt="Image 2" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/img/placeholder2.webp" alt="Image 3" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/img/placeholder2.webp" alt="Image 4" />
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/assets/img/placeholder2.webp" alt="Image 5" />
-                    </div>
-                </div>
+      <!-- main -->
+      <main>
+        <div class="container mt-5 p-3">
+          <h2 class="gallery-title p-3">FACILITIES</h2>
 
-                <!-- Navigation Buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper"></div>
+
+            <!-- Navigation buttons MUST be inside .swiper -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
-    </main>
+      </main>
 
-    <!-- footer -->
-    <div id="footer"></div>
+      <!-- footer -->
+      <div id="footer"></div>
+    </div>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
-        function loadHTML(id, file) {
-            fetch(file)
-                .then((response) => response.text())
-                .then((data) => (document.getElementById(id).innerHTML = data));
-        }
-        loadHTML("navigation", "/assets/navigation.html");
-        loadHTML("footer", "/assets/footer.html");
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
+      }
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
     </script>
-</body>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageSources = [
+          "/assets/img/placeholder1.jpg",
+          "/assets/img/placeholder2.webp",
+          "/assets/img/placeholder1.jpg",
+          "/assets/img/placeholder2.webp",
+          "/assets/img/placeholder1.jpg",
+          "/assets/img/placeholder2.webp",
+        ];
+
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+
+        imageSources.forEach((src, index) => {
+          const slide = document.createElement("div");
+          slide.className = "swiper-slide";
+          slide.innerHTML = `<img src="${src}" alt="Image ${index + 1}" />`;
+          swiperWrapper.appendChild(slide);
+        });
+
+        // Now initialize Swiper after slides are added
+        new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            576: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+          },
+        });
+      });
+    </script>
+  </body>
 </html>

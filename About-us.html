@@ -7,273 +7,262 @@
 </script>
 
 <body>
-  <div id="navigation"></div>
-
-  <!-- main -->
-  <main class="About_us">
-    <div class="aboutus">
-      <div class="aboutus-container">
-        <button class="learn-more">
-          <span class="button-text">Learn More</span>
-          <span class="arrow-icon"></span>
-        </button>
-      </div>
-
-      <div class="aboutus-dropdown">
-        <div class="container col-md-12 my-4">
-          <h1 class="pb-2">History</h1>
-          <p class="px-2">
-            <strong>
-              Our Founding, Milestones, and Legacy <br><br>
-            </strong>
-            Rooted in Faith. Growing with Purpose. <br><br>
-
-            Founded in 2000 by Grace Baptist Church, Baptist Voice Bible College (BVBC) began as a ministry to
-            provide Christ-centered education anchored in the Bible. Through the years, BVBC has grown from a small
-            school to a fully recognized institution offering quality basic and higher education. <br> <br>
-
-            With milestones such as government recognition for our Kindergarten, Elementary, and Junior High
-            programs, and a 100% passing rate in the Licensure Examination for Teachers, BVBC continues to build a
-            lasting legacy—shaping lives for God's glory.
-          </p>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-9 d-flex justify-content-between gap-2 mx-auto">
-            <img src="/assets/img/about-us/history/DSCN0479.JPG" alt="" width="60%">
-            <img src="/assets/img/about-us/history/DSCN0489.JPG" alt="" width="60%">
-            <img src="/assets/img/about-us/history/old.JPG" alt="" width="60%">
-            </div>
-          </div>
-        </div>
-      </div>
+  <div id="loading-screen" class="loading-screen" style="display: none;">
+    <div class="logo-container">
+      <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo">
     </div>
-    <div class="container my-5">
-      <div class="row g-5">
-        <div class="col-md-4 sticky-parent">
-          <img src="/assets/img/about-us/message-from-the-president-photo.JPG" alt=""
-            class="img-fluid rounded sticky-img" />
-        </div>
-        <div class="col-md-8">
-          <h1>Message from the President</h1>
-          <p id="text" class="message-content visible">
-            <!-- (same text content as before) -->
-            <b>Dear Friends and Visitors,</b> <br /><br />
-            Greetings in the matchless name of our Lord and Savior Jesus
-            Christ.
-            <br /><br />
-            It is with sincere gratitude and heartfelt joy that I welcome you
-            to the official website of <b>Baptist Voice Bible College</b>. We
-            count it a great privilege to introduce you to the vision, values,
-            and ministry of this institution, which exists solely for the
-            glory of God and the advancement of the Gospel of Jesus Christ.<br /><br />
-            Founded upon the timeless truths of the Word of God and anchored
-            in the historic Baptist faith, our college is committed to the
-            training and preparation of dedicated men and women for faithful
-            service in local churches, mission fields, and Christian
-            ministries worldwide. As an Independent Baptist institution, we
-            uphold the authority of Scripture, the autonomy of the local
-            church, and the centrality of the Gospel in all that we do.<br /><br />
-            At BVBC, students are challenged academically, enriched
-            spiritually, and equipped practically for the work of the
-            ministry. Our programs are intentionally designed to develop
-            biblically sound, spiritually mature, and ministry-ready servants
-            of Christ. Through sound doctrinal instruction, fervent prayer,
-            and real-world ministry experience, we aim to cultivate leaders
-            who will remain steadfast in truth and faithful in service.<br /><br />
-            This website serves as a window into the life and labor of our
-            college. Whether you are seeking a place to prepare for God's call
-            upon your life, exploring opportunities to partner with us in
-            prayer and support, or simply learning more about our mission, we
-            are honored by your interest. I encourage you to explore the
-            resources available here and to contact us should you desire
-            further information or assistance.<br /><br />
-            On behalf of our faculty, staff, and student body, thank you for
-            visiting. May the Lord richly bless you as you seek His will and
-            serve His Kingdom.<br /><br />
-            For His Glory,<br />
-            <b>Rudy Calayan</b><br />
-            BVBC - President<br />
-          </p>
-          <span id="seeMore" class="see-more" onclick="expandText()">See more</span>
-          <div class="container col-md-11 my-5">
-            <h2 class="col-md-11 mb-2">
-              Vission
-            </h2>
-            <p class="px-5 col-10 my-3">
-              To be a thriving Christian educational community where students grow in knowledge and faith, becoming
-              servant leaders who impact the world for Christ.
-            </p>
-            <h2 class="col-12 my-2">
-              Mission
-            </h2>
-            <p class="px-5 col-10 my-3">
-              To provide quality, Bible-based education that nurtures academic excellence, spiritual growth, and
-              strong character in every learner.
-            </p>
-            <h2 class="col-12 my-2">
-              Core Values
-            </h2>
-            <p class="">
-            <ul class="px-5 col-10">
-              <li class="mb-2">
-                <strong>Faith</strong> - Grounding all we do in God's Word.
-              </li>
-              <li class="mb-2">
-                <strong>Integrity</strong> - Living with honesty and honor.
-              </li>
-              <li class="mb-2">
-                <strong>Excellence</strong> - Striving for the best in academics and character.
-              </li>
-              <li class="mb-2">
-                <strong>Service</strong> - Serving others with humility and love.
-              </li>
-              <li class="mb-2">
-                <strong>Community</strong> - Building supportive and caring relationships.
-              </li>
-            </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
 
-    <div class="container text-center my-5 col-md-10">
-      <hr>
-      <p class="mx-auto pSize py-4">
-        Baptist Voice Bible College, also known as BVBC, is a private school
-        that offers foundational and higher education. It has been operated
-        and managed by Grace Baptist Church since 2000. The Basic Education
-        Department utilizes the Accelerated Christian Education system that
-        was started in the early 1970s by dedicated parents who desired
-        their children reared under the teaching of God's word - the Bible.
-        A.C.E. penetrated over 130 countries, where parents desire their
-        children's lives patterned after the timeless principles of God's
-        Word. <br /><br />
+    <div id="navigation"></div>
 
-        Department of Education-Region IV-A has given full recognition to
-        BVBC: Junior High School (years 7-10) since 2023, Elementary (Grades
-        1 through 6) since 2017, and Pre-Elementary (Kindergarten ) since
-        2016, as well as a permit to operate the Senior High School
-        (Academic Track) since 2018.<br /><br />
-
-        On the other hand, the College Department offers a Bachelor in
-        Theology and a Bachelor of Science in Christian Education. The
-        commitment of dedicated staff and diligent students in these
-        departments has bridged the Licensure Examination for Teachers with
-        100% marks for three consecutive undertakings.
-      </p>
-      <hr>
-    </div>
-
-    <div class="container my-5" id="who-we-are">
-      <h1 class="text-center mb-4">Who We Are</h1>
-      <div class="d-flex justify-content-center mb-3 gap-2 flex-wrap">
-        <button class="btn-modern active" onclick="showSection('board', event)">
-          Board of Trustees
-        </button>
-        <button class="btn-modern" onclick="showSection('faculty', event)">
-          Faculty Members
-        </button>
-      </div>
-
-      <div id="board" class="fade-section active">
-        <div class="row g-3">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/1.JPG" alt="" />
-              <div class="overlay">
-                <h6>RODOLFO O. CALAYAN</h6>
-                <p>President</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/2.JPG" alt="" />
-              <div class="overlay">
-                <h6>ROLLIE JAMES EBREO</h6>
-                <p>Chairman</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/3.JPG" alt="" />
-              <div class="overlay">
-                <h6>MARISSA VENDER</h6>
-                <p>Tresurer</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/4.JPG" alt="" />
-              <div class="overlay">
-                <h6>MARY JANE MALACAPAY</h6>
-                <p>Member</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/5.JPG" alt="" />
-              <div class="overlay">
-                <h6>RONEL NIEVA</h6>
-                <p>Member</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/6.JPG" alt="" />
-              <div class="overlay">
-                <h6>ROSELYN DEAN</h6>
-                <p>Member</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/7.JPG" alt="" />
-              <div class="overlay">
-                <h6>SHIELLA LIZA ENCONTRO</h6>
-                <p>Member</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="gallery-img">
-              <img src="/assets/img/about-us/boardAndTrusties/8.JPG" alt="" />
-              <div class="overlay">
-                <h6>VIRGINIA MARQUEZ</h6>
-                <p></p>
-              </div>
-            </div>
-          </div>
-          <!-- Add more images similarly -->
-        </div>
-      </div>
-
-      <div id="faculty" class="fade-section">
-        <div class="d-flex justify-content-center my-3 gap-2 flex-wrap">
-          <button class="btn-modern active" onclick="showSubSection('basicEd', event)">
-            BasicEd
-          </button>
-          <button class="btn-modern" onclick="showSubSection('college', event)">
-            College
+    <!-- main -->
+    <main class="About_us">
+      <div class="aboutus">
+        <div class="aboutus-container">
+          <button class="learn-more">
+            <span class="button-text">Learn More</span>
+            <span class="arrow-icon"></span>
           </button>
         </div>
 
-        <div id="basicEd" class="fade-section active">
+        <div class="aboutus-dropdown">
+          <div class="container my-4">
+            <h1 class="pb-2">History</h1>
+            <p class="px-2">
+              <strong>
+                Our Founding, Milestones, and Legacy<br><br>
+              </strong>
+              Rooted in Faith. Growing with Purpose.<br><br>
+
+              Founded in 2000 by Grace Baptist Church, Baptist Voice Bible College (BVBC) began as a ministry to
+              provide Christ-centered education anchored in the Bible. Through the years, BVBC has grown from a small
+              school to a fully recognized institution offering quality basic and higher education.<br><br>
+
+              With milestones such as government recognition for our Kindergarten, Elementary, and Junior High
+              programs, and a 100% passing rate in the Licensure Examination for Teachers, BVBC continues to build a
+              lasting legacy—shaping lives for God's glory.
+            </p>
+          </div>
+
+          <div class="container img-history">
+            <div class="row justify-content-center g-3">
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <img src="/assets/img/about-us/history/DSCN0479.JPG" alt="History 1" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <img src="/assets/img/about-us/history/DSCN0489.JPG" alt="History 2" class="img-fluid rounded shadow">
+              </div>
+              <div class="col-12 col-md-4 d-flex justify-content-center">
+                <img src="/assets/img/about-us/history/old.JPG" alt="Old Photo" class="img-fluid rounded shadow">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container my-5">
+        <div class="row g-5">
+          <div class="col-md-4 sticky-parent">
+            <img src="/assets/img/about-us/message-from-the-president-photo.JPG" alt=""
+              class="img-fluid rounded sticky-img" />
+          </div>
+          <div class="col-md-8">
+            <h1>Message from the President</h1>
+            <p id="text" class="message-content visible">
+              <!-- (same text content as before) -->
+              <b>Dear Friends and Visitors,</b> <br /><br />
+              Greetings in the matchless name of our Lord and Savior Jesus
+              Christ.
+              <br /><br />
+              It is with sincere gratitude and heartfelt joy that I welcome you
+              to the official website of <b>Baptist Voice Bible College</b>. We
+              count it a great privilege to introduce you to the vision, values,
+              and ministry of this institution, which exists solely for the
+              glory of God and the advancement of the Gospel of Jesus Christ.<br /><br />
+              Founded upon the timeless truths of the Word of God and anchored
+              in the historic Baptist faith, our college is committed to the
+              training and preparation of dedicated men and women for faithful
+              service in local churches, mission fields, and Christian
+              ministries worldwide. As an Independent Baptist institution, we
+              uphold the authority of Scripture, the autonomy of the local
+              church, and the centrality of the Gospel in all that we do.<br /><br />
+              At BVBC, students are challenged academically, enriched
+              spiritually, and equipped practically for the work of the
+              ministry. Our programs are intentionally designed to develop
+              biblically sound, spiritually mature, and ministry-ready servants
+              of Christ. Through sound doctrinal instruction, fervent prayer,
+              and real-world ministry experience, we aim to cultivate leaders
+              who will remain steadfast in truth and faithful in service.<br /><br />
+              This website serves as a window into the life and labor of our
+              college. Whether you are seeking a place to prepare for God's call
+              upon your life, exploring opportunities to partner with us in
+              prayer and support, or simply learning more about our mission, we
+              are honored by your interest. I encourage you to explore the
+              resources available here and to contact us should you desire
+              further information or assistance.<br /><br />
+              On behalf of our faculty, staff, and student body, thank you for
+              visiting. May the Lord richly bless you as you seek His will and
+              serve His Kingdom.<br /><br />
+              For His Glory,<br />
+              <b>Rudy Calayan</b><br />
+              BVBC - President<br />
+            </p>
+            <span id="seeMore" class="see-more" onclick="expandText()">See more</span>
+            <div class="container col-md-11 my-5">
+              <h2 class="col-md-11 mb-2">
+                Vission
+              </h2>
+              <p class="px-5 col-10 my-3">
+                To be a thriving Christian educational community where students grow in knowledge and faith, becoming
+                servant leaders who impact the world for Christ.
+              </p>
+              <h2 class="col-12 my-2">
+                Mission
+              </h2>
+              <p class="px-5 col-10 my-3">
+                To provide quality, Bible-based education that nurtures academic excellence, spiritual growth, and
+                strong character in every learner.
+              </p>
+              <h2 class="col-12 my-2">
+                Core Values
+              </h2>
+              <p class="">
+              <ul class="px-5 col-10">
+                <li class="mb-2">
+                  <strong>Faith</strong> - Grounding all we do in God's Word.
+                </li>
+                <li class="mb-2">
+                  <strong>Integrity</strong> - Living with honesty and honor.
+                </li>
+                <li class="mb-2">
+                  <strong>Excellence</strong> - Striving for the best in academics and character.
+                </li>
+                <li class="mb-2">
+                  <strong>Service</strong> - Serving others with humility and love.
+                </li>
+                <li class="mb-2">
+                  <strong>Community</strong> - Building supportive and caring relationships.
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container text-center my-5 col-md-10">
+        <hr>
+        <p class="mx-auto pSize py-4">
+          Baptist Voice Bible College, also known as BVBC, is a private school
+          that offers foundational and higher education. It has been operated
+          and managed by Grace Baptist Church since 2000. The Basic Education
+          Department utilizes the Accelerated Christian Education system that
+          was started in the early 1970s by dedicated parents who desired
+          their children reared under the teaching of God's word - the Bible.
+          A.C.E. penetrated over 130 countries, where parents desire their
+          children's lives patterned after the timeless principles of God's
+          Word. <br /><br />
+
+          Department of Education-Region IV-A has given full recognition to
+          BVBC: Junior High School (years 7-10) since 2023, Elementary (Grades
+          1 through 6) since 2017, and Pre-Elementary (Kindergarten ) since
+          2016, as well as a permit to operate the Senior High School
+          (Academic Track) since 2018.<br /><br />
+
+          On the other hand, the College Department offers a Bachelor in
+          Theology and a Bachelor of Science in Christian Education. The
+          commitment of dedicated staff and diligent students in these
+          departments has bridged the Licensure Examination for Teachers with
+          100% marks for three consecutive undertakings.
+        </p>
+        <hr>
+      </div>
+
+      <div class="container my-5" id="who-we-are">
+        <h1 class="text-center mb-4">Who We Are</h1>
+        <div class="d-flex justify-content-center mb-3 gap-2 flex-wrap">
+          <button class="btn-modern active" onclick="showSection('board', event)">
+            Board of Trustees
+          </button>
+          <button class="btn-modern" onclick="showSection('faculty', event)">
+            Faculty Members
+          </button>
+        </div>
+
+        <div id="board" class="fade-section active">
           <div class="row g-3">
             <div class="col-12 col-sm-6 col-lg-3">
               <div class="gallery-img">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
+                <img src="/assets/img/about-us/boardAndTrusties/1.JPG" alt="" />
                 <div class="overlay">
-                  <h6>Name</h6>
-                  <p>Subject</p>
+                  <h6>RODOLFO O. CALAYAN</h6>
+                  <p>President</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/2.JPG" alt="" />
+                <div class="overlay">
+                  <h6>ROLLIE JAMES EBREO</h6>
+                  <p>Chairman</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/3.JPG" alt="" />
+                <div class="overlay">
+                  <h6>MARISSA VENDER</h6>
+                  <p>Tresurer</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/4.JPG" alt="" />
+                <div class="overlay">
+                  <h6>MARY JANE MALACAPAY</h6>
+                  <p>Member</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/5.JPG" alt="" />
+                <div class="overlay">
+                  <h6>RONEL NIEVA</h6>
+                  <p>Member</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/6.JPG" alt="" />
+                <div class="overlay">
+                  <h6>ROSELYN DEAN</h6>
+                  <p>Member</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/7.JPG" alt="" />
+                <div class="overlay">
+                  <h6>SHIELLA LIZA ENCONTRO</h6>
+                  <p>Member</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="gallery-img">
+                <img src="/assets/img/about-us/boardAndTrusties/8.JPG" alt="" />
+                <div class="overlay">
+                  <h6>VIRGINIA MARQUEZ</h6>
+                  <p></p>
                 </div>
               </div>
             </div>
@@ -281,60 +270,86 @@
           </div>
         </div>
 
-        <!-- galery -->
-        <div id="college" class="fade-section">
-          <div class="row g-3">
-            <div class="col-12 col-sm-6 col-lg-3">
-              <div class="gallery-img">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
-                <div class="overlay">
-                  <h6>Name</h6>
-                  <p>Department</p>
+        <div id="faculty" class="fade-section">
+          <div class="d-flex justify-content-center my-3 gap-2 flex-wrap">
+            <button class="btn-modern active" onclick="showSubSection('basicEd', event)">
+              BasicEd
+            </button>
+            <button class="btn-modern" onclick="showSubSection('college', event)">
+              College
+            </button>
+          </div>
+
+          <div id="basicEd" class="fade-section active">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="gallery-img">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
+                  <div class="overlay">
+                    <h6>Name</h6>
+                    <p>Subject</p>
+                  </div>
                 </div>
               </div>
+              <!-- Add more images similarly -->
             </div>
-            <!-- Add more images similarly -->
+          </div>
+
+          <!-- galery -->
+          <div id="college" class="fade-section">
+            <div class="row g-3">
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="gallery-img">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
+                  <div class="overlay">
+                    <h6>Name</h6>
+                    <p>Department</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more images similarly -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    
-  </main>
 
-  <!-- footer -->
-  <div id="footer"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="/assets/js/functions.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    function loadHTML(id, file) {
-      fetch(file)
-        .then((response) => response.text())
-        .then((data) => (document.getElementById(id).innerHTML = data));
-    }
-    loadHTML("navigation", "/assets/navigation.html");
-    loadHTML("footer", "/assets/footer.html");
-  </script>
+    </main>
 
-  <script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-      const aboutUsSection = document.querySelector(".About_us");
-
-      if (aboutUsSection) {
-        const button = aboutUsSection.querySelector(".learn-more");
-        const dropdown = aboutUsSection.querySelector(".aboutus-dropdown");
-        const arrow = aboutUsSection.querySelector(".arrow-icon");
-
-        if (button && dropdown && arrow) {
-          button.addEventListener("click", () => {
-            dropdown.classList.toggle("open");
-            arrow.classList.toggle("arrow-up");
-          });
-        }
+    <!-- footer -->
+    <div id="footer"></div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function loadHTML(id, file) {
+        fetch(file)
+          .then((response) => response.text())
+          .then((data) => (document.getElementById(id).innerHTML = data));
       }
-    });
-  </script>
+      loadHTML("navigation", "/assets/navigation.html");
+      loadHTML("footer", "/assets/footer.html");
+    </script>
+
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const aboutUsSection = document.querySelector(".About_us");
+
+        if (aboutUsSection) {
+          const button = aboutUsSection.querySelector(".learn-more");
+          const dropdown = aboutUsSection.querySelector(".aboutus-dropdown");
+          const arrow = aboutUsSection.querySelector(".arrow-icon");
+
+          if (button && dropdown && arrow) {
+            button.addEventListener("click", () => {
+              dropdown.classList.toggle("open");
+              arrow.classList.toggle("arrow-up");
+            });
+          }
+        }
+      });
+    </script>
 </body>
 
 </html>

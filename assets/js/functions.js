@@ -8,13 +8,35 @@ $(document).ready(function () {
 });
 
 //---------------- loading screen ------------------//
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loading-screen");
+  const logo = document.getElementById("loader-logo");
+  const content = document.getElementById("main-content");
 
-// Wait for the page to fully load
-window.addEventListener("load", () => {
-  // Delay a bit so animation finishes smoothly
-  setTimeout(() => {
-    document.getElementById("loadingScreen").classList.add("hide");
-  }, 2000); // adjust to match animation duration
+  function startLoaderSequence() {
+    loader.style.display = "flex"; // show loader
+    requestAnimationFrame(() => {
+      loader.classList.add("show", "animate");
+    });
+
+    // Keep loader visible for the duration of the animation
+    setTimeout(() => {
+      loader.classList.add("hide");
+      content.style.display = "block";
+      requestAnimationFrame(() => {
+        content.classList.add("show"); // fade in
+      });
+
+      // Optional: fully remove loader from DOM after fade
+      setTimeout(() => loader.remove(), 800);
+    }, 2000);
+  }
+
+  if (logo.complete) {
+    startLoaderSequence();
+  } else {
+    logo.onload = startLoaderSequence;
+  }
 });
 
 //------------------- carousel ---------------------//
@@ -90,6 +112,25 @@ setInterval(next, 4000);
 // Initialize
 setupCarousel();
 
+//------------------- college ---------------------//
+// const sections = document.querySelectorAll('.full-width-section');
+// const buttons = document.querySelectorAll('.toggle-btn');
+
+// buttons.forEach(btn => {
+//   btn.addEventListener('click', function () {
+//     const targetId = this.dataset.target;
+//     const targetSection = document.getElementById(targetId);
+//     sections.forEach(sec => sec.style.display = 'none');
+//     targetSection.style.display = 'block';
+//   });
+// });
+
+// document.querySelectorAll('.close-btn').forEach(close => {
+//   close.addEventListener('click', function () {
+//     this.parentElement.style.display = 'none';
+//   });
+// });
+
 //------------------- Admission ---------------------//
 document.querySelectorAll(".section-header").forEach((header) => {
   const arrow = header.querySelector(".arrow");
@@ -104,7 +145,6 @@ document.querySelectorAll(".section-header").forEach((header) => {
     arrow.classList.remove('arrow-rotated');
   });
 });
-
 //------------------- about us ---------------------//
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('note').classList.add('show');
