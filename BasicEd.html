@@ -7,73 +7,84 @@
 </script>
 
 <body>
-  <div id="navigation"></div>
-
-  <!-- main -->
-
-  <main class="BasicEdMain">
-    <div class="bgoverview">
-      <div class="bgimgBE1">
-        <div class="overlay1"></div>
-      </div>
-      <h1>Basic Education</h1>
+  <div id="loading-screen" class="loading-screen" style="display: none;">
+    <div class="logo-container">
+      <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo">
     </div>
+  </div>
 
-    <div class="container my-5">
-      <!-- Description Section -->
-      <div class="row">
-        <div class="col-12 text-center">
-          <p>
-            The BVBC Basic Education Department utilizes the
-            Accelerated Christian Education (A.C.E.) system, which
-            began in the early 1970s through the efforts of dedicated
-            parents who desired their children to be reared under the
-            teachings of God's Word—the Bible. This vision became the
-            heart and soul of the program, which has now reached over
-            130 countries, where parents desire to have their children's
-            lives patterned after the Lord Jesus Christ. Your support is
-            significant as we strive for excellence and
-            continuous improvement for this school year and its succeeding years. </p>
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
+
+    <div id="navigation"></div>
+
+    <!-- main -->
+
+    <main class="BasicEdMain">
+      <div class="bgoverview">
+        <div class="bgimgBE1">
+          <div class="overlay1"></div>
         </div>
+        <h1>Basic Education</h1>
       </div>
 
-      <!-- 4 Containers Section -->
-      <div class="row d-flex justify-content-center">
-        <!-- Container 1 -->
-        <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
-          <img src="/assets/img/basicEd/NR.jpg" alt="Nursery">
-          <h3 class="pt-3">Nursery</h3>
-          <p>
-            Our youngest learners build strong foundations through the A.C.E. Learning-to-Read program, mastering basic
-            skills in Math, English, Science, Social Studies, Word Building, and Filipino. By year-end, they earn a
-            Certificate of Completion or receive guidance for remedial work if needed.
-          </p>
+      <div class="container my-5">
+        <!-- Description Section -->
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>
+              The BVBC Basic Education Department utilizes the
+              Accelerated Christian Education (A.C.E.) system, which
+              began in the early 1970s through the efforts of dedicated
+              parents who desired their children to be reared under the
+              teachings of God's Word—the Bible. This vision became the
+              heart and soul of the program, which has now reached over
+              130 countries, where parents desire to have their children's
+              lives patterned after the Lord Jesus Christ. Your support is
+              significant as we strive for excellence and
+              continuous improvement for this school year and its succeeding years. </p>
+          </div>
         </div>
 
-        <!-- Container 2 -->
-        <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
-          <img src="/assets/img/basicEd/elem.JPG" alt="Elementary">
-          <h3 class="pt-3">Elementary</h3>
-          <p>
-            In 6 years, students deepen their knowledge across core subjects and Philippine History. Completing the
-            required PACEs qualifies them for graduation and promotion to Junior High. Students with diagnosed learning
-            difficulties may follow a specialized track. </p>
-          </p>
-        </div>
+        <!-- 4 Containers Section -->
+        <div class="row d-flex justify-content-center">
+          <!-- Container 1 -->
+          <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
+            <img src="/assets/img/basicEd/NR.jpg" alt="Nursery">
+            <h3 class="pt-3">Nursery</h3>
+            <p>
+              Our youngest learners build strong foundations through the A.C.E. Learning-to-Read program, mastering
+              basic
+              skills in Math, English, Science, Social Studies, Word Building, and Filipino. By year-end, they earn a
+              Certificate of Completion or receive guidance for remedial work if needed.
+            </p>
+          </div>
 
-        <!-- Container 3 -->
-        <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
-          <img src="/assets/img/basicEd/jhs.JPG" alt="Junior Highschool">
-          <h3 class="pt-3"> Junior High School</h3>
-          <p>
-            Covering Years 7-10, students follow either a General or Honors course. Completion of all academic
-            requirements is essential for moving up to Senior High. Students may need to extend their stay if major
-            requirements aren't met.
-          </p>
-        </div>
+          <!-- Container 2 -->
+          <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
+            <img src="/assets/img/basicEd/elem.JPG" alt="Elementary">
+            <h3 class="pt-3">Elementary</h3>
+            <p>
+              In 6 years, students deepen their knowledge across core subjects and Philippine History. Completing the
+              required PACEs qualifies them for graduation and promotion to Junior High. Students with diagnosed
+              learning
+              difficulties may follow a specialized track. </p>
+            </p>
+          </div>
 
-        <!-- Container 4 uncomment if shs need -->
-        <!-- <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
+          <!-- Container 3 -->
+          <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
+            <img src="/assets/img/basicEd/jhs.JPG" alt="Junior Highschool">
+            <h3 class="pt-3"> Junior High School</h3>
+            <p>
+              Covering Years 7-10, students follow either a General or Honors course. Completion of all academic
+              requirements is essential for moving up to Senior High. Students may need to extend their stay if major
+              requirements aren't met.
+            </p>
+          </div>
+
+          <!-- Container 4 uncomment if shs need -->
+          <!-- <div class="col-lg-3 col-md-6 col-sm-12 m-2 container-box">
           <img src="/assets/img/placeholder2.webp" alt="Image 4">
           <h3 class="pt-3">Senior High School</h3>
           <p>
@@ -81,13 +92,14 @@
             all strand-specific requirements earns them the SHS Diploma.
           </p>
         </div> -->
+        </div>
       </div>
-    </div>
 
-  </main>
+    </main>
 
-  <!-- footer -->
-  <div id="footer"></div>
+    <!-- footer -->
+    <div id="footer"></div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/assets/js/functions.js"></script>
   <script>

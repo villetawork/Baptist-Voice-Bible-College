@@ -224,21 +224,14 @@ main {
 /*-------------------- Explore Section --------------------*/
 .explore {
   position: relative;
-  /* Make the container relative to allow for absolute positioning */
   background-image: url("/assets/img/Home/Background-imgs/BG1.png");
-  /* Set your background image */
   background-position: center center;
-  /* Position the image at the center */
   background-size: cover;
-  /* Make sure the image covers the entire container */
   background-repeat: no-repeat;
-  /* Prevent repetition of the image */
   background-attachment: fixed;
-  /* Ensure the background stays fixed during scrolling */
   padding: 17px;
   padding-top: 65px;
   padding-bottom: 160px;
-  /* Add some padding */
   z-index: 1;
 }
 
@@ -268,17 +261,19 @@ main {
   text-align: center;
   margin-bottom: 30px;
   width: 100%;
+  background: rgba(31, 4, 4, 0.5);
+  padding: 4px;
 }
 
 .explore .header_explore h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: rgba(var(--gold-color), 1);
   font-weight: 700;
 }
 
 .explore .header_explore p {
-  font-size: 1rem;
-  color: rgba(var(--secondary-color), 1);
+  font-size: 1.2rem;
+  color: rgba(var(--text-white), 1);
   max-width: 600px;
   margin: 0 auto;
 }
@@ -312,7 +307,7 @@ main {
   transform: scale(1.05);
 }
 
-.explore .container > .imgcontainer {
+.explore .container>.imgcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -322,7 +317,7 @@ main {
   overflow: hidden;
 }
 
-.explore .container > .imgcontainer img {
+.explore .container>.imgcontainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -347,8 +342,7 @@ main {
 
 /*---------------- Basic Ed.----------------*/
 .bgimgBE1 {
-  background: url("/assets/img/backgrounds/bg2.jpg") no-repeat center
-    center/cover;
+  background: url("/assets/img/backgrounds/bg2.jpg") no-repeat center center/cover;
   height: 100%;
   position: absolute;
   /* Positioned at the top of the section */
@@ -393,6 +387,12 @@ main {
 .programs-section {
   position: relative;
   overflow: hidden;
+}
+
+.blurred-text-container {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
 }
 
 .background-fixed {
@@ -446,6 +446,33 @@ main {
   color: #fff;
 }
 
+.full-width-section {
+  display: none;
+  background-color: rgba(var(--primary-color), 0.4);
+  padding: 2rem;
+  position: relative;
+  color: #501f1f;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #501f1f;
+}
+
+.subjects {
+  background: #eeeeeecb;
+  width: 300px;
+  padding-top: 12px;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
 /* -------------------- Admission -------------------- */
 .bgimgAd1 {
   background: rgba(var(--primary-color), 1);
@@ -463,30 +490,42 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  background-color: rgba(var(--primary-color));
+  background-color: rgba(var(--primary-color), 1);
   color: white;
   border-radius: 0;
 }
 
+/* Smooth dropdown animation */
+.collapse-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  /* match section-header padding */
+  background: #bdbdbd;
+  /* optional, match your design */
+  overflow: hidden;
+  transition: all 0.35s ease;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+.collapse.show.collapse-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Arrow animation */
 .arrow {
   width: 2.25rem;
   height: 2.25rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.35s ease;
   margin-left: 0.5rem;
   color: #fff;
 }
 
-.arrow-rotate {
+.arrow-rotated {
   transform: rotate(180deg);
-}
-
-.collapse-content {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto 0.7rem auto;
-  padding: 3rem;
-  background: #bdbdbd;
-  border-radius: 0;
 }
 
 .collapse-content p {
@@ -504,13 +543,6 @@ main {
   margin: 0;
   font-size: 1.25rem;
   display: inline;
-}
-
-.section-header {
-  cursor: pointer;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
 }
 
 .custom-header h1,
@@ -572,17 +604,14 @@ main.Contact-us .container {
 
 /* ------------------- about us ------------------- */
 
-.historyImgX {
-  width: 100%;
-}
-
 
 .aboutus .aboutus-container {
   width: 100%;
   height: 45vh;
   background-image: url("/assets/img/Home/Background-imgs/BG1.png");
   background-size: cover;
-  background-position: 0 500px;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -611,7 +640,7 @@ main.Contact-us .container {
 }
 
 .aboutus .aboutus-dropdown.open {
-  max-height: 500px;
+  max-height: 100vh;
   padding: 20px;
 }
 
@@ -655,6 +684,37 @@ main.Contact-us .container {
 .aboutus .arrow-up {
   transform: rotate(-135deg);
 }
+
+/* Enable horizontal scroll only for the image section on small screens */
+.aboutus .img-history {
+  overflow-x: auto;
+  /* enable horizontal scrolling */
+  white-space: nowrap;
+  /* keep items on one line */
+  padding-bottom: 10px;
+  /* spacing for scroll bar */
+}
+
+/* Make columns inline-block so they don't wrap */
+.aboutus .img-history .col-12 {
+  display: inline-block;
+  float: none;
+  /* remove Bootstrap float */
+  white-space: normal;
+  /* so text in col behaves normally */
+  vertical-align: top;
+}
+
+/* Optional: remove Bootstrap's g-3 gap for mobile to make it tighter */
+@media (max-width: 768px) {
+  .aboutus .img-history .row {
+    flex-wrap: nowrap;
+    /* no wrapping */
+    gap: 10px;
+    /* small gap between images */
+  }
+}
+
 
 /*---- message of president ----*/
 .message-content {
@@ -722,10 +782,11 @@ main.Contact-us .container {
 
 .gallery-img img {
   width: 100%;
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   display: block;
   margin: auto;
+  max-height: 600px;
 }
 
 .gallery-img:hover {
@@ -778,7 +839,7 @@ main.Contact-us .container {
   background: #eee;
 }
 
-/* ------------------- Gallery ------------------- */
+/* ------------------- facilities ------------------- */
 
 .swiper {
   width: 100%;
@@ -802,4 +863,16 @@ main.Contact-us .container {
   margin-top: 30px;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.swiper,
+.swiper-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

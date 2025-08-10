@@ -7,152 +7,172 @@
 </script>
 
 <body>
-  <div id="navigation"></div>
-
-  <!-- main -->
-  <main class="Admission">
-    <div class="custom-header bgimgAd1 w-100">
-      <div class="container text-start">
-        <h1 class="fw-bold mb-2">Admission & Requirement</h1>
-        <p class="mb-0">
-          We are excited to welcome new learners to our growing BVBC
-          family!<br />
-          Below are the details you need to get started on your enrollment
-          journey with us.
-        </p>
-      </div>
-    </div>
-
-    <div class="container dropdowntabs mt-5">
-    <div class="center-container">
-
-      <!-- Section 1 Header -->
-      <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-        aria-controls="collapseOne">
-        <h2>Basic Education</h2>
-        <!-- SVG Chevron Down -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow bi bi-chevron-compact-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
-        </svg>
-      </div>
-      <div class="collapse collapse-content" id="collapseOne">
-        <p>
-          <!-- content omitted for brevity (same as before) -->
-          <strong>Qualification</strong><br><br>
-          <strong>For Christian School: (Basic Education)</strong><br>
-        <ol>
-          <li>Students who are financially incapable to sustain financial obligation of the school. An ITR will be
-            required to substantiate such claim.</li>
-          <li>Student who are academically competent with a general average of 85% above.</li>
-          <li>Students who have good moral conduct and are willing to deepen their faith in Jesus Christ.</li>
-          <li>Students who are able to pass the diagnostic test with remarkable score according to their grade level.</li>
-          <li>Students who are able to pass the interview facilitated by the school Board of Trustees.</li>
-        </ol><br><br>
-        <strong>Application Process</strong><br><br>
-        <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
-        <ol>
-          <li>Interested applicants must inquire to the principal's office for preliminary interview.</li>
-          <li>Fill out scholarship application form with document attached such as birth certificate, school card, ITR,
-            application letter and Brgy. Clearance.</li>
-          <li>Applicant along with their parent are scheduled for interview by the Board of Trustees.</li>
-          <li>For senior students (2nd year and up) who excel academically, documents like ITR, birth certificate,
-            application letter, and clearance are still required. Students are also subject to a spiritual review.</li>
-        </ol>
-        </p>
-      </div>
-
-      <!-- Section 2 Header -->
-      <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-        aria-controls="collapseTwo">
-        <h2>College Department</h2>
-        <!-- SVG Chevron Down -->
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow bi bi-chevron-compact-down" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
-        </svg>
-      </div>
-      <div class="collapse collapse-content" id="collapseTwo">
-        <p>
-          <!-- content omitted for brevity (same as before) -->
-          <strong>Qualification</strong><br><br>
-          <strong>For Bible School: (College)</strong><br>
-        <ol>
-          <li>Students who are financially incapable to sustain financial obligation of the school. An ITR will be
-            required to substantiate such claim.</li>
-          <li>Students who are academically competent with a general average of 85% above.</li>
-          <li>Students who have good moral conduct and are willing to be trained according to Bible school standards.</li>
-          <li>Students who are faithful in attending services and ministry of Grace Baptist Church.</li>
-          <li>Students who are able to pass the interview facilitated by the school Board of Trustees.</li>
-        </ol><br><br>
-        <strong>Application Process</strong><br><br>
-        <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
-        <ol>
-          <li>Applicants must inquire at the registrar's office for preliminary interview.</li>
-          <li>Fill out scholarship application form with documents attached (birth certificate, school card, ITR,
-            application letter, Brgy. Clearance).</li>
-          <li>Applicants are scheduled for diagnostic examination.</li>
-          <li>After passing, applicants and their parents will be interviewed by the Board of Trustees.</li>
-        </ol>
-        </p>
-      </div>
-
+  <div id="loading-screen" class="loading-screen" style="display: none;">
+    <div class="logo-container">
+      <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo">
     </div>
   </div>
 
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
 
-    <div class="container py-5">
-      <h2 class="fw-bold mb-4"></h2>
-      <ol class="ps-3">
-        <li class="mb-3">
-          <p>
-            <strong>Inquire</strong> - Visit our campus or contact our office to
-            begin the admission process.
-          </p>
-        </li>
-        <li class="mb-3">
-          <p>
-            <strong>Submit Requirements</strong> - Provide the required documents for
-            evaluation.
-          </p>
-        </li>
-        <li class="mb-3">
-          <p>
-            <strong>Student Assessment</strong> - Applicants may be asked to complete
-            an academic readiness test or attend an interview.
-          </p>
-        </li>
-        <li class="mb-3">
-          <p>
-            <strong>Confirmation & Payment</strong>> - Once accepted, complete payment
-            and attent the orientation session.
-          </p>
-        </li>
-      </ol>
+    <div id="navigation"></div>
 
-      <hr class="my-5">
-
-      <h2 class="fw-bold mb-4"></h2>
-      <ol class="ps-3">
-        <li class="mb-3">
-          <p>
-            <strong>Kindergarten</strong> Must be
-            <strong>5 y/o</strong> by <strong>October 31</strong> of the
-            current school year.
+    <!-- main -->
+    <main class="Admission">
+      <div class="custom-header bgimgAd1 w-100">
+        <div class="container text-start">
+          <h1 class="fw-bold mb-2">Admission & Requirement</h1>
+          <p class="mb-0">
+            We are excited to welcome new learners to our growing BVBC
+            family!<br />
+            Below are the details you need to get started on your enrollment
+            journey with us.
           </p>
-        </li>
-        <li class="mb-3">
-          <p>
-            <strong>Elementary</strong> Must be
-            <strong>6 y/o</strong> by <strong>October 31</strong> of the
-            current school year.
-          </p>
-        </li>
-      </ol>
-    </div>
+        </div>
+      </div>
 
-  </main>
+      <div class="container dropdowntabs mt-5">
+        <div class="center-container">
 
-  <!-- footer -->
-  <div id="footer"></div>
+          <!-- Section 1 Header -->
+          <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+            aria-controls="collapseOne">
+            <h2>Basic Education</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow bi bi-chevron-compact-down"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67" />
+            </svg>
+          </div>
+          <div class="collapse collapse-content" id="collapseOne">
+            <div class="container p-3">
+              <p>
+                <!-- content omitted for brevity (same as before) -->
+                <strong>Qualification</strong><br><br>
+                <strong>For Christian School: (Basic Education)</strong><br>
+              <ol>
+                <li>Students who are financially incapable to sustain financial obligation of the school. An ITR will be
+                  required to substantiate such claim.</li>
+                <li>Student who are academically competent with a general average of 85% above.</li>
+                <li>Students who have good moral conduct and are willing to deepen their faith in Jesus Christ.</li>
+                <li>Students who are able to pass the diagnostic test with remarkable score according to their grade
+                  level.</li>
+                <li>Students who are able to pass the interview facilitated by the school Board of Trustees.</li>
+              </ol><br><br>
+              <strong>Application Process</strong><br><br>
+              <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
+              <ol>
+                <li>Interested applicants must inquire to the principal's office for preliminary interview.</li>
+                <li>Fill out scholarship application form with document attached such as birth certificate, school card,
+                  ITR,
+                  application letter and Brgy. Clearance.</li>
+                <li>Applicant along with their parent are scheduled for interview by the Board of Trustees.</li>
+                <li>For senior students (2nd year and up) who excel academically, documents like ITR, birth certificate,
+                  application letter, and clearance are still required. Students are also subject to a spiritual review.
+                </li>
+              </ol>
+              </p>
+            </div>
+          </div>
+
+          <!-- Section 2 Header -->
+          <div class="section-header" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+            aria-controls="collapseTwo">
+            <h2>College Department</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="arrow bi bi-chevron-compact-down"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67" />
+            </svg>
+          </div>
+          <div class="collapse collapse-content" id="collapseTwo">
+            <div class="container p-3">
+              <p>
+                <!-- content omitted for brevity (same as before) -->
+                <strong>Qualification</strong><br><br>
+                <strong>For Bible School: (College)</strong><br>
+              <ol>
+                <li>Students who are financially incapable to sustain financial obligation of the school. An ITR will be
+                  required to substantiate such claim.</li>
+                <li>Students who are academically competent with a general average of 85% above.</li>
+                <li>Students who have good moral conduct and are willing to be trained according to Bible school
+                  standards.</li>
+                <li>Students who are faithful in attending services and ministry of Grace Baptist Church.</li>
+                <li>Students who are able to pass the interview facilitated by the school Board of Trustees.</li>
+              </ol><br><br>
+              <strong>Application Process</strong><br><br>
+              <strong>BIBLE SCHOOL APPLICANTS:</strong><br>
+              <ol>
+                <li>Applicants must inquire at the registrar's office for preliminary interview.</li>
+                <li>Fill out scholarship application form with documents attached (birth certificate, school card, ITR,
+                  application letter, Brgy. Clearance).</li>
+                <li>Applicants are scheduled for diagnostic examination.</li>
+                <li>After passing, applicants and their parents will be interviewed by the Board of Trustees.</li>
+              </ol>
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="container py-5">
+        <h2 class="fw-bold mb-4"></h2>
+        <ol class="ps-3">
+          <li class="mb-3">
+            <p>
+              <strong>Inquire</strong> - Visit our campus or contact our office to
+              begin the admission process.
+            </p>
+          </li>
+          <li class="mb-3">
+            <p>
+              <strong>Submit Requirements</strong> - Provide the required documents for
+              evaluation.
+            </p>
+          </li>
+          <li class="mb-3">
+            <p>
+              <strong>Student Assessment</strong> - Applicants may be asked to complete
+              an academic readiness test or attend an interview.
+            </p>
+          </li>
+          <li class="mb-3">
+            <p>
+              <strong>Confirmation & Payment</strong>> - Once accepted, complete payment
+              and attent the orientation session.
+            </p>
+          </li>
+        </ol>
+
+        <hr class="my-5">
+
+        <h2 class="fw-bold mb-4"></h2>
+        <ol class="ps-3">
+          <li class="mb-3">
+            <p>
+              <strong>Kindergarten</strong> Must be
+              <strong>5 y/o</strong> by <strong>October 31</strong> of the
+              current school year.
+            </p>
+          </li>
+          <li class="mb-3">
+            <p>
+              <strong>Elementary</strong> Must be
+              <strong>6 y/o</strong> by <strong>October 31</strong> of the
+              current school year.
+            </p>
+          </li>
+        </ol>
+      </div>
+
+    </main>
+
+    <!-- footer -->
+    <div id="footer"></div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/assets/js/functions.js"></script>

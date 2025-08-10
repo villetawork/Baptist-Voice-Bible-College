@@ -7,73 +7,198 @@
 </script>
 
 <body>
-  <div id="navigation"></div>
-
-  <!-- main -->
-  <main class="CollegeMain">
-    <div class="bgoverview">
-      <div class="bgimgC1">
-        <div class="overlay1"></div>
-      </div>
-      <h1>College Overview</h1>
+  <div id="loading-screen" class="loading-screen" style="display: none;">
+    <div class="logo-container">
+      <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo">
     </div>
+  </div>
 
-    <div class="programs-section py-5">
-      <div class="background-fixed"></div>
+  <!-- Main Content -->
+  <div id="main-content" style="display: none;">
 
-      <div class="container">
-        <div class="text-center mb-4">
-          <h3>BVBC College Programs</h3>
-          <p>
-            BVBC students are taught by qualified professors guided by biblical principles and directed by a CHED
-            recognized Curriculum. Our graduates are ready and competent for Licensure Examination for Professional
-            Teachers (LEPT). Our institution hones every student the Christ-like values to better serve their purpose
-            according to God's will in their lives.
-          </p>
+    <div id="navigation"></div>
+
+    <!-- main -->
+    <main class="CollegeMain">
+      <div class="bgoverview">
+        <div class="bgimgC1">
+          <div class="overlay1"></div>
         </div>
+        <h1>College Overview</h1>
+      </div>
 
-        <div class="row g-4 justify-content-center">
-          <div class="col-md-6 col-lg-4">
-            <div class="program-container">
-              <div class="program-content">
-                <img
-                  src="/assets/img/college/Theo.JPG"
-                  alt="Program 1">
-                <h3 class="text-center">Bachelor in Theology</h3>
-                <p class="text-center">
-                  A degree focused on biblical studies, doctrine, church history, and ministry training. It prepares
-                  students for roles such as pastors, missionaries, and church leaders by deepening their knowledge of
-                  God's Word and practical ministry skills.
-                </p>
+      <div class="programs-section py-5">
+        <div class="background-fixed"></div>
+        <div class="container py-4">
+          <div class="text-center mb-4 blurred-text-container p-3">
+            <h3>BVBC College Programs</h3>
+            <p>BVBC students are taught by qualified professors guided by biblical principles and directed by a CHED
+              recognized Curriculum...</p>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="program-container">
+                <div class="program-content">
+                  <img src="/assets/img/college/Theo.JPG" alt="Program 1">
+                  <h3 class="text-center">Bachelor in Theology</h3>
+                  <p class="text-center">
+                    A degree focused on biblical studies, doctrine, church history, and ministry training. It prepares
+                    students for roles such as pastors, missionaries, and church leaders by deepening their knowledge of
+                    God's Word and practical ministry skills.
+                  </p>
+                </div>
+                <button type="button" class="btn btn-custom mt-2 align-self-end toggle-btn" data-target="section1">View
+                  Curriculum</button>
               </div>
-              <a href="/path/to/program1.pdf" class="btn btn-custom mt-2 align-self-end">View Curriculum</a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="program-container">
+                <div class="program-content">
+                  <img src="/assets/img/college/bsCed.JPG" alt="Program 2">
+                  <h3 class="text-center">Bachelor of Science in Christian Education</h3>
+                  <p class="text-center">
+                    A degree that equips future Christian educators to teach in schools or churches. It combines
+                    academic
+                    education principles with biblical values, preparing graduates to teach both general and faith-based
+                    subjects, often in preparation for the Licensure Examination for Teachers (LET).
+                  </p>
+                </div>
+                <button type="button" class="btn btn-custom mt-2 align-self-end toggle-btn" data-target="section2">View
+                  Curriculum</button>
+              </div>
             </div>
           </div>
 
-          <div class="col-md-6 col-lg-4">
-            <div class="program-container">
-              <div class="program-content">
-                <img
-                  src="/assets/img/college/bsCed.JPG"
-                  alt="Program 2">
-                <h3 class="text-center">Bachelor of Science in Christian Education</h3>
-                <p class="text-center">
-                  A degree that equips future Christian educators to teach in schools or churches. It combines academic
-                  education principles with biblical values, preparing graduates to teach both general and faith-based
-                  subjects, often in preparation for the Licensure Examination for Teachers (LET).
-                </p>
+          <div id="section1" class="full-width-section mt-3">
+            <button type="button" class="close-btn" aria-label="Close">&times;</button>
+            <h1>Subjects</h1>
+
+          </div>
+
+          <div id="section2" class="full-width-section mt-3">
+            <button type="button" class="close-btn" aria-label="Close">&times;</button>
+            <h1><strong>Subjects</strong></h1>
+            <!-- <div class="container"> -->
+              <div class="row justify-content-evenly">
+                <div class="col-md-5 subjects">
+                  <h4>
+                    Prelims
+                  </h4>
+                  <ul>
+                    <li>Foundation of Values Education
+                    </li>
+                    <li>Understanding the Self
+                    </li>
+                    <li>Purposive Communication
+                    </li>
+                    <li>The Church of Christ
+                    </li>
+                    <li>Psycho. Theories of Val. Dev't
+                    </li>
+                    <li>Personal % Cummunity Hygiene
+                    </li>
+                    <li>CWTS 1 & 2
+                    </li>
+                    <li>Komunikasion sa Akademikong Fil.
+                    </li>
+                    <li>Study of God
+                    </li>
+                    <li>Church of Principles
+                    </li>
+                    <li>The Contemporary World
+                    </li>
+                    <li>Dynamics of Intra & Interpersonal Rel
+                    </li>
+                    <li>Rhytmic Activities
+                    </li>
+                    <li>Filipino Value System
+                    </li>
+                    <li>Contemporary Family Life
+                    </li>
+                    <li>Mathematics in the Modern World
+                    </li>
+                    <li>Baptist History 1
+                    </li>
+                    <li>Pagbasa at Pagsulat Tungo sa Pananaliksik
+                    </li>
+                    <li>The Child & Adolescent Learners
+                    </li>
+                    <li>Individual Sports
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-5 subjects">
+                  <h4>
+                    Midterm
+                  </h4>
+                  <ul>
+                    <li>Psycho-Spiritual Development</li>
+                    <li>Moral Issues & Concern in Con ..</li>
+                    <li>The Teaching Profession</li>
+                    <li>Carreer Dev't. & Work Values</li>
+                    <li>Masining na Pagpapahayag</li>
+                    <li>Reading in Phil. History</li>
+                    <li>Team Sports</li>
+                    <li>Introduction to Guidance & ...</li>
+                    <li>Phil. Culture & the Soc.</li>
+                    <li>Baptist History 2</li>
+                    <li>The Teacher and the Community ...</li>
+                    <li>Art Appreciation</li>
+                    <li>Gender and Society</li>
+                    <li>Philosophical & Ethical Foundation</li>
+                    <li>Information Tech & Human Dev't.</li>
+                    <li>Facilitation: Theory & Practice</li>
+                    <li>Development of Values Ed. ....</li>
+                    <li>Teaching Approaches & Strat...</li>
+                    <li>Foundation of Special & Inclusive Ed.</li>
+                    <li>Study of Man</li>
+                    <li>Science Technology & Society</li>
+                  </ul>
+                </div>
+                <div class="col-md-5 subjects">
+                  <h4>Pre-Finals</h4>
+                  <ul>
+                    <li>Transformative Education</li>
+                    <li>Values Integration in Various Dis.</li>
+                    <li>Research in Values Ed. 1</li>
+                    <li>Facilitating Learner Centered ...</li>
+                    <li>Rizal Life Works & Writings</li>
+                    <li>Sunday School Admininistration</li>
+                    <li>Values Ed. through Comm. Service</li>
+                    <li>Research in Values Ed. 2</li>
+                    <li>Assessment in  Learning 1</li>
+                    <li>Technology for Teaching & Learning</li>
+                    <li>The Teacher & The School Curr.</li>
+                    <li>Technology for Teaching & Learning 2</li>
+                    <li>The Entrepreneurial Mind</li>
+                    <li>Assessment in Learning 2</li>
+                    <li>Building & Enhancing New Lit. ...</li>
+                    <li>Ethics</li>
+                  </ul>
+                </div>
+                <div class="col-md-5 subjects">
+                  <h4>Finals</h4>
+                  <ul>
+                    <li>FS 1-Observation of Teaching-Lear..</li>
+                    <li>FS2- Part. & Teachinf Assistanship</li>
+                    <li>Local & Foreign Mission</li>
+                    <li>Teaching Internship</li>
+                    <li>Course Review 1 & 2</li>
+                    <li>Great Books</li>
+                  </ul>
+                </div>
               </div>
-              <a href="/path/to/program2.pdf" class="btn btn-custom mt-2 align-self-end">View Curriculum</a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- footer -->
-  <div id="footer"></div>
-
+    <!-- footer -->
+    <div id="footer"></div>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="/assets/js/functions.js"></script>
   <script>
@@ -84,6 +209,24 @@
     }
     loadHTML("navigation", "/assets/navigation.html");
     loadHTML("footer", "/assets/footer.html");
+
+    const sections = document.querySelectorAll('.full-width-section');
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function () {
+        const targetId = this.dataset.target;
+        const targetSection = document.getElementById(targetId);
+        sections.forEach(sec => sec.style.display = 'none');
+        targetSection.style.display = 'block';
+      });
+    });
+
+    document.querySelectorAll('.close-btn').forEach(close => {
+      close.addEventListener('click', function () {
+        this.parentElement.style.display = 'none';
+      });
+    });
   </script>
 </body>
 
