@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+    fetch("/assets/head.html")
+        .then((response) => response.text())
+        .then((data) => (document.head.innerHTML = data));
+</script>
+
+<body>
+    <div id="loading-screen" class="loading-screen" style="display: none">
+        <div class="logo-container">
+            <img id="loader-logo" src="/assets/img/logo/Logo.png" alt="Logo" />
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none">
+        <div id="navigation"></div>
+
+        <!-- main -->
+        <main class="hymn">
+            <div class="container d-flex justify-content-center">
+                <div class="col-md-4 pt-5 mt-5 d-flex flex-column justify-content-center">
+                    <h1 class="lh-lg text-center">ALMA MATER SONG</h1>
+                    <p class="lg-base col-sm-12 d-flex flex-column px-5">
+                        We raise the Baptist Voice <br>
+                        To praise the Lord, His love proclaim, <br>
+                        The Bible is our guide<br>
+                        Our Light along the way<br>
+                        With God in us we cannot fail<br>
+                        <br>
+                        <strong class="text-muted">Refrain</strong>
+                        Baptist Voice Bible College<br>
+                        God's chosen place for us to learn<br>
+                        Your vision to uphold your mission to fulfill<br>
+                        We love B-V-B-C<br>
+                        Loyal we'll ever be<br>
+                        <br>
+                        Rise up and join the throng<br>
+                        of Christian teachers, workers, all<br>
+                        Some wounds to heal,<br>
+                        Some souls to win for Christ our King<br>
+                        In every thing God will prevail<br><br>
+                        <strong class="text-muted">(Repeat Refrain)</strong>
+                    </p>
+                </div>
+            </div>
+        </main>
+
+        <!-- footer -->
+        <div id="footer"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/assets/js/functions.js"></script>
+    <script>
+        function loadHTML(id, file) {
+            fetch(file)
+                .then((response) => response.text())
+                .then((data) => (document.getElementById(id).innerHTML = data));
+        }
+        loadHTML("navigation", "/assets/navigation.html");
+        loadHTML("footer", "/assets/footer.html");
+    </script>
+</body>
+
+</html>
