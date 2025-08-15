@@ -387,7 +387,6 @@ main {
   background-color: #eee;
   border-radius: 10px;
   transition: transform 0.3s ease;
-  /* Optional: for a hover effect */
 }
 
 .container-box img {
@@ -399,7 +398,6 @@ main {
   transform: translateY(-10px);
   background-color: rgba(var(--primary-color), 0.85);
   color: rgba(var(--text-white), 1);
-  /* Optional: makes the box lift on hover */
 }
 
 /*----------------College Dep.----------------*/
@@ -523,15 +521,12 @@ main {
   border-radius: 0;
 }
 
-/* Smooth dropdown animation */
 .collapse-content {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
   padding: 0.75rem 1rem;
-  /* match section-header padding */
   background: #bdbdbd;
-  /* optional, match your design */
   overflow: hidden;
   transition: all 0.35s ease;
   opacity: 0;
@@ -543,7 +538,6 @@ main {
   transform: translateY(0);
 }
 
-/* Arrow animation */
 .arrow {
   width: 2.25rem;
   height: 2.25rem;
@@ -586,7 +580,6 @@ main.Contact-us {
   align-items: center;
 }
 
-/* container: column layout: contact info on top, map below */
 main.Contact-us .container {
   display: flex;
   flex-direction: column;
@@ -595,10 +588,8 @@ main.Contact-us .container {
   padding: 20px;
   width: 800px;
   gap: 100px;
-  /* space between contact and map */
 }
 
-/* contacttxt: column layout: title then info */
 .contacttxt {
   display: flex;
   flex-direction: column;
@@ -608,19 +599,15 @@ main.Contact-us .container {
   gap: 20px;
 }
 
-/* Map container: holds the map centered */
 .map {
   width: 100%;
   max-width: 1900px;
-  /* adjust as needed */
   aspect-ratio: 16 / 9;
-  /* keeps it in 16:9 ratio */
   border: 0;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: style for heading and contact info */
 .contacttxt h1 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -646,7 +633,6 @@ main.Contact-us .container {
   position: relative;
   padding-bottom: 20px;
   overflow: hidden;
-  /* Make sure overlay stays inside */
 }
 
 .aboutus .aboutus-container::before {
@@ -654,9 +640,7 @@ main.Contact-us .container {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  /* dark overlay */
   z-index: 0;
-  /* behind button */
 }
 
 .aboutus .aboutus-dropdown {
@@ -681,7 +665,6 @@ main.Contact-us .container {
   cursor: pointer;
   font-family: inherit;
   z-index: 1;
-  /* on top of overlay */
   position: relative;
 }
 
@@ -713,33 +696,23 @@ main.Contact-us .container {
   transform: rotate(-135deg);
 }
 
-/* Enable horizontal scroll only for the image section on small screens */
 .aboutus .img-history {
   overflow-x: auto;
-  /* enable horizontal scrolling */
   white-space: nowrap;
-  /* keep items on one line */
   padding-bottom: 10px;
-  /* spacing for scroll bar */
 }
 
-/* Make columns inline-block so they don't wrap */
 .aboutus .img-history .col-12 {
   display: inline-block;
   float: none;
-  /* remove Bootstrap float */
   white-space: normal;
-  /* so text in col behaves normally */
   vertical-align: top;
 }
 
-/* Optional: remove Bootstrap's g-3 gap for mobile to make it tighter */
 @media (max-width: 768px) {
   .aboutus .img-history .row {
     flex-wrap: nowrap;
-    /* no wrapping */
     gap: 10px;
-    /* small gap between images */
   }
 }
 
@@ -792,6 +765,25 @@ main.Contact-us .container {
 .sticky-img {
   position: sticky;
   top: 2rem;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.right-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.right-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ------------- School description ------------- */

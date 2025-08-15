@@ -13,7 +13,6 @@
     </div>
   </div>
 
-  <!-- Main Content -->
   <div id="main-content" style="display: none;">
 
     <div id="navigation"></div>
@@ -71,7 +70,6 @@
           <div class="col-md-8">
             <h1>Message from the President</h1>
             <p id="text" class="message-content visible">
-              <!-- (same text content as before) -->
               <b>Dear Friends and Visitors,</b> <br /><br />
               Greetings in the matchless name of our Lord and Savior Jesus
               Christ.
@@ -152,6 +150,64 @@
         </div>
       </div>
 
+
+      <br><br>
+      <div class="container mt-5">
+        <div class="row align-items-stretch flex-column-reverse flex-md-row">
+          <div class="col-md-8">
+            <div class="left-container p-3 h-100">
+              <div>
+                <h5>
+                  This logo belongs to Baptist Voice Bible College and appears to carry a strong symbolic and biblical
+                  meaning. Here's a breakdown of its elements:
+                </h5>
+                <ul>
+                  <li>
+                    <strong>Main Figure </strong> - The silhouette of a person holding a sword-like object (likely
+                    representing the "Sword
+                    of the Spirit" from Ephesians 6:17, which is the Word of God) suggests spiritual strength,
+                    readiness, and steadfastness in faith.
+                  </li>
+                  <li>
+                    <strong>Flames</strong> - Surrounding the figure are flames, which symbolize trials, persecution,
+                    and testing of faith. Biblically, fire can represent both refining (purification) and persecution
+                    for one's beliefs.
+                  </li>
+                  <li>
+                    <strong>Text “Better to Burn Than Bow”</strong>- This is a bold motto implying that it's better
+                    to endure suffering (even death) than to compromise or bow to ungodly
+                    demands. It echoes the biblical story of Shadrach, Meshach, and Abednego
+                    in Daniel 3, who chose the fiery furnace over worshipping a false god.
+                  </li>
+                  <li>
+                    <strong>Year “2000”</strong>- Likely the founding year of the college.
+                  </li>
+                  <li>
+                    <strong>Greek Text “Φωνὴ βοῶντος ἐν τῇ ἐρήμῳ”</strong> - This is Greek for “The voice of one
+                    crying in the wilderness,” a reference to John the Baptist (from Matthew 3:3,
+                    Mark 1:3, John 1:23, and Isaiah 40:3). It emphasizes the mission of proclaiming
+                    God's truth in a spiritually barren or hostile world.
+                  </li>
+                  <li>
+                    <strong>Circular Design</strong>- The round shape gives the emblem a seal-like feel, representing authority, unity, and
+                    completeness.
+                  </li>
+                </ul>
+              </div>
+              <h5>
+                This logo belongs to Baptist Voice Bible College and appears to carry a strong symbolic and biblical
+                meaning. Here's a breakdown of its elements:
+              </h5>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="right-container p-3 h-100">
+              <img src="/assets/img/logo/logo2.png" alt="Example Image">
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="container text-center my-5 col-md-10">
         <hr>
@@ -266,7 +322,7 @@
                 </div>
               </div>
             </div>
-            <!-- Add more images similarly -->
+            <!-- Add more -->
           </div>
         </div>
 
@@ -282,7 +338,7 @@
 
           <div id="basicEd" class="fade-section active">
             <div class="row g-3">
-              <div class="col-12 col-sm-6 col-lg-3">
+              <!-- <div class="col-12 col-sm-6 col-lg-3">
                 <div class="gallery-img">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
                   <div class="overlay">
@@ -290,15 +346,15 @@
                     <p>Subject</p>
                   </div>
                 </div>
-              </div>
-              <!-- Add more images similarly -->
+              </div> -->
+              <!-- Add more faculty -->
             </div>
           </div>
 
           <!-- galery -->
           <div id="college" class="fade-section">
             <div class="row g-3">
-              <div class="col-12 col-sm-6 col-lg-3">
+              <!-- <div class="col-12 col-sm-6 col-lg-3">
                 <div class="gallery-img">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg" alt="" />
                   <div class="overlay">
@@ -306,8 +362,8 @@
                     <p>Department</p>
                   </div>
                 </div>
-              </div>
-              <!-- Add more images similarly -->
+              </div> -->
+              <!-- Add more faculty -->
             </div>
           </div>
         </div>
@@ -319,37 +375,37 @@
     <!-- footer -->
     <div id="footer"></div>
   </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="/assets/js/functions.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      function loadHTML(id, file) {
-        fetch(file)
-          .then((response) => response.text())
-          .then((data) => (document.getElementById(id).innerHTML = data));
-      }
-      loadHTML("navigation", "/assets/navigation.html");
-      loadHTML("footer", "/assets/footer.html");
-    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/assets/js/functions.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function loadHTML(id, file) {
+      fetch(file)
+        .then((response) => response.text())
+        .then((data) => (document.getElementById(id).innerHTML = data));
+    }
+    loadHTML("navigation", "/assets/navigation.html");
+    loadHTML("footer", "/assets/footer.html");
+  </script>
 
-    <script defer>
-      document.addEventListener("DOMContentLoaded", () => {
-        const aboutUsSection = document.querySelector(".About_us");
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const aboutUsSection = document.querySelector(".About_us");
 
-        if (aboutUsSection) {
-          const button = aboutUsSection.querySelector(".learn-more");
-          const dropdown = aboutUsSection.querySelector(".aboutus-dropdown");
-          const arrow = aboutUsSection.querySelector(".arrow-icon");
+      if (aboutUsSection) {
+        const button = aboutUsSection.querySelector(".learn-more");
+        const dropdown = aboutUsSection.querySelector(".aboutus-dropdown");
+        const arrow = aboutUsSection.querySelector(".arrow-icon");
 
-          if (button && dropdown && arrow) {
-            button.addEventListener("click", () => {
-              dropdown.classList.toggle("open");
-              arrow.classList.toggle("arrow-up");
-            });
-          }
+        if (button && dropdown && arrow) {
+          button.addEventListener("click", () => {
+            dropdown.classList.toggle("open");
+            arrow.classList.toggle("arrow-up");
+          });
         }
-      });
-    </script>
+      }
+    });
+  </script>
 </body>
 
 </html>
