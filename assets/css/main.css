@@ -786,6 +786,11 @@ main.Contact-us .container {
   justify-content: center;
 }
 
+object {
+  width: 200px;
+  height: auto;
+}
+
 /* ------------- School description ------------- */
 .pSize {
   width: 85%;
