@@ -338,6 +338,9 @@ main {
 
 .news-image {
   margin-top: 4.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .see-more-link {
