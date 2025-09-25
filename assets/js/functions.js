@@ -52,8 +52,6 @@ const images = [
 
 let currentIndex = 1;
 const list = document.querySelector(".list");
-
-function createSlide(src, classNames = []) {
   const li = document.createElement("li");
   const img = document.createElement("img");
   img.src = src;
