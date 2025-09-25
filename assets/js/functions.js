@@ -45,7 +45,7 @@ const images = [
   "/assets/img/Home/carousel/2.png",
   "/assets/img/Home/carousel/4.png",
   "/assets/img/Home/carousel/6.png",
-  "/assets/img/Home/carousel/5.png",
+  "/assets/img/Home/carousel/7.png",
   // "/add/new/img/here"
 ];
 
