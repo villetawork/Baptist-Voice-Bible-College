@@ -1,3 +1,88 @@
+//------------------- carousel ---------------------//
+
+//change or add here only
+const images = [
+  "/assets/img/Home/carousel/1.png",
+  "/assets/img/Home/carousel/2.png",
+  "/assets/img/Home/carousel/4.png",
+  "/assets/img/Home/carousel/6.png",
+  "/assets/img/Home/carousel/7.png",
+  // "/add/new/img/here"
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let currentIndex = 1;
+const list = document.querySelector(".list");
+
+function createSlide(src, classNames = []) {
+  const li = document.createElement("li");
+  const img = document.createElement("img");
+  img.src = src;
+  li.appendChild(img);
+  li.classList.add(...classNames);
+  return li;
+}
+
+
+function setupCarousel() {
+  list.innerHTML = "";
+
+  const indices = [
+    currentIndex - 1, // prev
+    currentIndex, // act
+    currentIndex + 1, // next
+    currentIndex + 2, // new-next
+  ];
+
+  indices.forEach((i, idx) => {
+    const safeIndex = (i + images.length) % images.length;
+    const classes = ["prev", "act", "next", ["next", "new-next"]][idx];
+
+    const slide = createSlide(
+      images[safeIndex],
+      Array.isArray(classes) ? classes : [classes]
+    );
+    list.appendChild(slide);
+  });
+}
+
+function next() {
+  currentIndex = (currentIndex + 1) % images.length;
+  setupCarousel();
+}
+
+function prev() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  setupCarousel();
+}
+
 //------------------ mobile menu --------------------//
 
 $(document).ready(function () {
@@ -39,57 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-//------------------- carousel ---------------------//
-const images = [
-  "/assets/img/Home/carousel/1.png",
-  "/assets/img/Home/carousel/2.png",
-  "/assets/img/Home/carousel/4.png",
-  "/assets/img/Home/carousel/6.png",
-  "/assets/img/Home/carousel/7.png",
-  // "/add/new/img/here"
-];
-
-let currentIndex = 1;
-const list = document.querySelector(".list");{
-  const li = document.createElement("li");
-  const img = document.createElement("img");
-  img.src = src;
-  li.appendChild(img);
-  li.classList.add(...classNames);
-  return li;
-}
-
-function setupCarousel() {
-  list.innerHTML = "";
-
-  const indices = [
-    currentIndex - 1, // prev
-    currentIndex, // act
-    currentIndex + 1, // next
-    currentIndex + 2, // new-next
-  ];
-
-  indices.forEach((i, idx) => {
-    const safeIndex = (i + images.length) % images.length;
-    const classes = ["prev", "act", "next", ["next", "new-next"]][idx];
-
-    const slide = createSlide(
-      images[safeIndex],
-      Array.isArray(classes) ? classes : [classes]
-    );
-    list.appendChild(slide);
-  });
-}
-
-function next() {
-  currentIndex = (currentIndex + 1) % images.length;
-  setupCarousel();
-}
-
-function prev() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  setupCarousel();
-}
 
 // Manual click
 list.addEventListener("click", (e) => {
