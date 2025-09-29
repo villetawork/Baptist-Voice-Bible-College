@@ -46,14 +46,11 @@ const images = [
   "/assets/img/Home/carousel/4.png",
   "/assets/img/Home/carousel/6.png",
   "/assets/img/Home/carousel/7.png",
-
   // "/add/new/img/here"
 ];
 
 let currentIndex = 1;
-const list = document.querySelector(".list");
-
-function createSlide(src, classNames = []) {
+const list = document.querySelector(".list");{
   const li = document.createElement("li");
   const img = document.createElement("img");
   img.src = src;
